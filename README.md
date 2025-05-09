@@ -17,7 +17,12 @@ semana 2
 
 semana 3
 - pagina de produtos \
-  pagina de edição
+- pagina de edição \
+- ajuste geral \
+  Cálculo de frete via API \
+  Integração com sistemas de pagamento \ 
+  Dashboard administrativo com controle de produtos, pedidos e relatórios \
+  APIs RESTful e documentação opcional com Swagger
 
 semana 4
 - pagina de gerenciamento \
