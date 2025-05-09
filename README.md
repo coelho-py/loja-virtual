@@ -12,7 +12,7 @@ semana 2
   estrutura do login \
   back do login
   
-- iniciar banco de dados mySql \
+- iniciar banco de dados  json incial \
   por login no banco de dados 
 
 semana 3
@@ -22,5 +22,6 @@ semana 3
 semana 4
 - pagina de gerenciamento \
   (cliente [Meus dados, Meus pedidos e etc]) \
-  carrinho, checkout, pesquisa de produto e seguranca de conta
+  carrinho, checkout, pesquisa de produto e seguranca de conta \
+  testes, converter para uma db (mySql), debug e revisao 
   
