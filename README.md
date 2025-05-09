@@ -20,5 +20,6 @@ semana 3
   pagina de edição
 
 semana 4
-- pagina de gerenciamento \ (cliente [Meus dados, Meus pedidos e etc])
+- pagina de gerenciamento \
+  (cliente [Meus dados, Meus pedidos e etc])
   
