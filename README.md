@@ -22,5 +22,5 @@ semana 3
 semana 4
 - pagina de gerenciamento \
   (cliente [Meus dados, Meus pedidos e etc]) \
-  carrinho, checkout, pesquisa de produto e seguranca de conta \
+  carrinho, checkout, pesquisa de produto e seguranca de conta
   
