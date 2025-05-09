@@ -8,8 +8,8 @@ semana 1
   footer bem recheado
 
 semana 2
-- pagina do login
-  estrutura do login
+- pagina do login \
+  estrutura do login \
   back do login
   
 - iniciar banco de dados mySql
