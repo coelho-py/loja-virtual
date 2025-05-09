@@ -17,5 +17,5 @@ semana 2
 
 semana 3
 - pagina de produtos \
-  edição e adição de produtos \
-  perm para adm e owner
+  pagina de edição + gerenciamento
+  
