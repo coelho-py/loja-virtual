@@ -14,3 +14,8 @@ semana 2
   
 - iniciar banco de dados mySql \
   por login no banco de dados 
+
+semana 3
+- pagina de produtos \
+  edição e adição de produtos \
+  perm para adm e owner
