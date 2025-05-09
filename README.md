@@ -16,8 +16,8 @@ semana 2
   por login no banco de dados 
 
 semana 3
-- pagina de produtos \
-- pagina de edição \
+- pagina de produtos 
+- pagina de edição 
 - ajuste geral \
   Cálculo de frete via API \
   Integração com sistemas de pagamento \ 
