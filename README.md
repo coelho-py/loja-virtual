@@ -17,5 +17,8 @@ semana 2
 
 semana 3
 - pagina de produtos \
-  pagina de edição + gerenciamento
+  pagina de edição
+
+semana 4
+- pagina de gerenciamento \ (cliente [Meus dados, Meus pedidos e etc])
   
