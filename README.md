@@ -22,6 +22,8 @@ semana 3
 semana 4
 - pagina de gerenciamento \
   (cliente [Meus dados, Meus pedidos e etc]) \
+
+- reta final \
   carrinho, checkout, pesquisa de produto e seguranca de conta \
   testes, converter para uma db (mySql), debug e revisao 
   
