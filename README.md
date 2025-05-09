@@ -12,15 +12,23 @@ semana 2
   estrutura do login \
   back do login
   
-- iniciar banco de dados mySql \
+- iniciar banco de dados  json incial \
   por login no banco de dados 
 
 semana 3
 - pagina de produtos \
-  pagina de edição
+- pagina de edição \
+- ajuste geral \
+  Cálculo de frete via API \
+  Integração com sistemas de pagamento \ 
+  Dashboard administrativo com controle de produtos, pedidos e relatórios \
+  APIs RESTful e documentação opcional com Swagger
 
 semana 4
 - pagina de gerenciamento \
-  (cliente [Meus dados, Meus pedidos e etc]) \
-  carrinho, checkout, pesquisa de produto e seguranca de conta
+  (cliente [Meus dados, Meus pedidos e etc]) 
+
+- reta final \
+  carrinho, checkout, pesquisa de produto e seguranca de conta \
+  testes, converter para uma db (mySql), debug e revisao 
   
