@@ -2,9 +2,9 @@
 
 
 semana 1
-- Pagina inicial 
-  conteudo centralizado 
-  baser num e-comerce padrao 
+- Pagina inicial \
+  conteudo centralizado \
+  baser num e-comerce padrao \
   footer bem recheado
 
 semana 2
@@ -12,5 +12,5 @@ semana 2
   estrutura do login \
   back do login
   
-- iniciar banco de dados mySql
+- iniciar banco de dados mySql \
   por login no banco de dados 
