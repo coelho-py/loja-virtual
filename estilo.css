@@ -48,6 +48,15 @@ section{
 
 /* Nav */
 
+nav{
+    text-align: Center;
+    display: flex
+}
 
+nav a{
+    text-decoration: none;
+    color: #fff;
+
+}
     
 
