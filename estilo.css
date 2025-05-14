@@ -1,6 +1,7 @@
 :root{
     --cor_fundo: #f0f0d8;
     --cor_header: #604848;
+
 }
 
 *{
@@ -11,6 +12,7 @@
 
 body{
     background-color: var(--cor_fundo);
+    gap:2rem;
 }
 
 header{
@@ -24,8 +26,15 @@ main{
 
 footer{
     background-color:  var(--cor_header);
+    text-align: center;
 }
 
 h1{ 
     color: #ECDBB6;
+}
+
+.item{
+    height: 90px;
+    width: 60px;
+    background-color:#c0d860 ;
 }
