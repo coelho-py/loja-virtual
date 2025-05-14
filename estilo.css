@@ -12,21 +12,25 @@
 
 body{
     background-color: var(--cor_fundo);
-    margin:20px;
 }
 
 header{
     background-color: var(--cor_header);
     text-align: center;
+    padding: 2rem;
 }
 
 main{
-    background-color: var(--cor_fundo);
+   display: flex;
+    border: 2px solid black;
+    padding: 20px;
+    gap:100px;
 }
 
 footer{
     background-color:  var(--cor_header);
     text-align: center;
+    padding: 2rem;
 }
 
 h1{ 
@@ -38,10 +42,5 @@ h1{
     width: 60px;
     background-color:#c0d860 ;
 }
+    
 
-main{
-    display: flex;
-    border: 2px solid black;
-    padding: 20px;
-    gap:10px;
-}
