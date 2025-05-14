@@ -12,7 +12,7 @@
 body{
     display:grid;
     grid-template-areas:
-    'header header header'
+    'header header header' 4fr
     'main main main'
     'footer footer' ;
     background-color: var(--cor_fundo);
