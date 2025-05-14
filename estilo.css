@@ -42,4 +42,5 @@ h1{
 main{
     display: flex;
     border: 2px solid black;
+    gap:10px;
 }
