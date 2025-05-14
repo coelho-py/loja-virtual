@@ -10,26 +10,19 @@
 }
 
 body{
-    display:grid;
-    grid-template-areas:
-    'header header header' 4fr
-    'main main main'
-    'footer footer' ;
     background-color: var(--cor_fundo);
 }
 
 header{
-    grid-area: header;
     background-color: var(--cor_header);
+    text-align: center;
 }
 
 main{
-    grid-area: main;
     background-color: var(--cor_fundo);
 }
 
 footer{
-    grid-area:footer;
     background-color:  var(--cor_header);
 }
 
