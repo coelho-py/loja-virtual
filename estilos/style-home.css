@@ -15,16 +15,20 @@ body{
     'header header header'
     'main main main'
     'footer footer' ;
+    background-color: var(--cor_fundo);
 }
 
 header{
     grid-area: header;
+    background-color: var(--cor_header);
 }
 
 main{
     grid-area: main;
+    background-color: var();
 }
 
 footer{
     grid-area:footer;
+    background-color:  var(--cor_header);
 }
