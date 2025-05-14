@@ -60,10 +60,11 @@ nav a{
     font-size: 18pt;
     color: #fff;
     padding: 12px 50px 10px 0px;
+    position: relative;
 }
 
 nav a::after{
-    content: "";
+    content: " ";
     width: 100%;
     height: 4px;
     background-color: #0000;
