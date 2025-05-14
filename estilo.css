@@ -37,13 +37,14 @@ h1{
 
 .item{
     height: 90px;
-    width: 3fr;
+    width: 60px;
     background-color:#c0d860 ;
 }
 
 section{
     border:3px solid black;
     padding: 12px;
+    width: 3fr;
 }
 
 /* Nav */
@@ -58,6 +59,13 @@ nav a{
     text-align: end;
     color: #fff;
     padding: 12px 50px 10px 0px;
+}
+
+nav a::after{
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #0000;
 }
     
 
