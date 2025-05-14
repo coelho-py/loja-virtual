@@ -55,8 +55,9 @@ nav{
 
 nav a{
     text-decoration: none;
+    text-align: end;
     color: #fff;
-    padding: 12px 0px 10px 0px;
+    padding: 12px 50px 10px 0px;
 }
     
 
