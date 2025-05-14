@@ -25,10 +25,14 @@ header{
 
 main{
     grid-area: main;
-    background-color: var();
+    background-color: var(--cor_fundo);
 }
 
 footer{
     grid-area:footer;
     background-color:  var(--cor_header);
+}
+
+h1{ 
+    color: #ECDBB6;
 }
