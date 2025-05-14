@@ -22,7 +22,6 @@ header{
 
 main{
    display: flex;
-    border: 2px solid black;
     padding: 20px;
     gap:100px;
 }
@@ -41,6 +40,11 @@ h1{
     height: 90px;
     width: 60px;
     background-color:#c0d860 ;
+}
+
+section{
+    border:3px solid black;
+    padding: 12px;
 }
     
 
