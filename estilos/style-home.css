@@ -1,0 +1,30 @@
+:root{
+    --cor_fundo: #f0f0d8;
+    --cor_header: #604848;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display:grid;
+    grid-template-areas:
+    'header header header'
+    'main main main'
+    'footer footer' ;
+}
+
+header{
+    grid-area: header;
+}
+
+main{
+    grid-area: main;
+}
+
+footer{
+    grid-area:footer;
+}
