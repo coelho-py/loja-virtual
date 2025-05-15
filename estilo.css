@@ -30,6 +30,8 @@ footer{
     background-color:  var(--cor_header);
     text-align: center;
     padding: 2rem;
+    position:absolute;
+    bottom:0;
 }
 
 h1{ 
