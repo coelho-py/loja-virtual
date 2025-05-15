@@ -21,7 +21,7 @@ header{
 
 main{
     display: flex;
-    padding: 20px;
+    padding: 3rem;
     gap:100px;
     height:100vhd;
 }
@@ -39,11 +39,6 @@ h1{
     color: #ECDBB6;
 }
 
-.item{
-    height: 90px;
-    width: 60px;
-    background-color:#c0d860 ;
-}
 
 section{
     border:3px solid black;
