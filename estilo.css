@@ -74,7 +74,7 @@ nav a::after{
     transition: 0.8s ease-in-out;
 }
 
-nav a:hover ::after{
+nav a:hover::after{
     width:100%;
 
 }
