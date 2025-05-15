@@ -82,9 +82,13 @@ nav a:hover::after{
 /*Fim Nav*/
 
 #foto-perfil{
-    width:40px;
-    height:40px;
+    width:30px;
+    height:30px;
     border-radius: 100px;
+}
+
+#Div-login{
+  align-content: center;  
 }
 
     
