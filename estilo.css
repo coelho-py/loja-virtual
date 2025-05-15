@@ -89,6 +89,7 @@ nav a:hover::after{
 
 #Div-login{
   align-content: center;  
+  gap:9px;
 }
 
     
