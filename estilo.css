@@ -168,7 +168,8 @@ nav a:hover::after{
 .Slider-box{
     width:100%;
     height: 30px;
-    border:2ppx solid dodgerblue;
+    border:2px solid black;
+    Padding:2rem:
 }
 
 
