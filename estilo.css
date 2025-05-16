@@ -169,14 +169,13 @@ nav a:hover::after{
     width:100%;
     height:300px;
     border:2px solid black;
-    Padding: 1.2rem;
 }
 
 .slider{
     display: flex;
     width:calc(3 * 100%);
     height: 100%;
-    animation: slide 9s infinite;
+    animation: slide 24s infinite;
 }
 
 .slider img{
@@ -187,8 +186,8 @@ nav a:hover::after{
 
 @keyframes slide {
     0% { transform: translateX(0); }
-    33.33% { transform: translateX(-40%); } /* Move para a segunda imagem */
-    66.66% { transform: translateX(-70%); } /* Move para a terceira imagem */
+    33.33% { transform: translateX(-30%); } /* Move para a segunda imagem */
+    66.66% { transform: translateX(-50%); } /* Move para a terceira imagem */
     100% { transform: translateX(0); } /* Volta para a primeira imagem */
   }
 
