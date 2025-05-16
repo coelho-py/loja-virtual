@@ -55,7 +55,7 @@ nav{
 nav a{
     text-decoration: none;
     text-align: center;
-    font-size: 18pt;
+    font-size: 10pt;
     color: whitesmoke;
     padding: 12px 70px 10px 0px;
     position: relative;  
@@ -65,7 +65,7 @@ nav a::after{
     content: " ";
     width: 0%;
     height: 4px;
-    background-color: black;
+    background-color: whitesmoke;
     position: absolute;
     bottom:0;
     left:0;
@@ -88,6 +88,10 @@ nav a:hover::after{
   align-content: center; 
 
 }
+
+/*Fim Header*/
+
+/*Main Start*/
 
 /* DIV Product */
 .categorias {
@@ -154,3 +158,38 @@ nav a:hover::after{
     font-weight: 500;
     color: #333;
 }
+
+/*Products End*/
+
+/*Main End*/
+
+/*Slider Start*/
+
+.Slider-box{
+    width:100%;
+    height:300px;
+    border:2px solid black;
+    Padding: 1.2rem;
+}
+
+.slider{
+    display: flex;
+    width:calc(3 * 100%);
+    height: 100%;
+    animation: slide 9s infinite;
+}
+
+.slider img{
+    height: 100%;
+    width: 100%;
+    object-fit:cover contain;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33.33% { transform: translateX(-50%); } /* Move para a segunda imagem */
+    66.66% { transform: translateX(-100%); } /* Move para a terceira imagem */
+    100% { transform: translateX(0); } /* Volta para a primeira imagem */
+  }
+
+/*Slider End*/
