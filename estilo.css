@@ -12,7 +12,10 @@
 
 body{
     background-color: var(--cor_fundo);
+    overflow:hidden;
 }
+
+/* Header Start*/
 
 header{
     background-color: var(--cor_header);
@@ -53,7 +56,7 @@ nav a{
     text-decoration: none;
     text-align: end;
     font-size: 18pt;
-    color: #fff;
+    color: #fb0000;
     padding: 12px 70px 10px 0px;
     position: relative;  
 }
@@ -73,8 +76,6 @@ nav a:hover::after{
     width:80%;
 
 }
-
-/*Fim Nav*/
 
 #foto-perfil{
     width:30px;
