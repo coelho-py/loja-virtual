@@ -92,8 +92,7 @@ nav a:hover::after{
 /*Fim Header*/
 
 /*Main Start*/
-
-/* DIV Product */
+/* DIV Product Categoroa*/
 .categorias {
     max-width: 1200px;
     margin: 40px auto;
@@ -158,8 +157,58 @@ nav a:hover::after{
     font-weight: 500;
     color: #333;
 }
-
-/*Products End*/
+/*Products Categoria End*/
+/* Products Destaque Begin */
+.produtos-destaque {
+    padding: 40px;
+    text-align: center;
+}
+.produtos-destaque h2 {
+    margin-bottom: 30px;
+}
+.grid-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.produto {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+}
+.produto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.produto h3 {
+    margin: 10px 0 5px;
+}
+.produto p {
+    color: #555;
+}
+.produto .preco {
+    font-weight: bold;
+    color: #007b00;
+    margin-top: 10px;
+}
+.produto button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.produto button:hover {
+    background-color: #0056b3;
+}
+/* Products Destaque End */
 
 /*Main End*/
 
