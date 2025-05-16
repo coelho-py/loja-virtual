@@ -22,6 +22,29 @@ header{
     padding: 2rem;
 }
 
+main {
+    padding: 3rem 1rem;
+    min-height: 100vh;
+}
+
+footer{
+    background-color:  var(--cor_header);
+    text-align: center;
+    padding: 2rem;
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+
+h1{ 
+    color: #ECDBB6;
+}
+
+.card{
+    height: 5rem;
+    width: 3rem;
+}
+
 /* Nav */
 
 nav{
@@ -66,70 +89,68 @@ nav a:hover::after{
 
 }
 
-/*Fim Nav*/
+/* DIV Product */
+.categorias {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
 
-/*Header End*/
-
-/* Body Start */
-
-main{
+.topo-categorias {
     display: flex;
-    padding: 3rem;
-    gap:100px;
-    height:100vhd;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
 }
 
-.Slider-background{
-    position:fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+.topo-categorias h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
 }
 
-.slide{
-    position:absolute;
-    top: 0;
-    left: 0;
-    background-size: cover ;
-
+.topo-categorias a {
+    font-size: 0.95rem;
+    color: #007bff;
+    text-decoration: none;
 }
 
-section{
-    border:3px solid black;
-    padding: 1.3rem;
-    width: 100%;
-    height: 100%;
+.topo-categorias a:hover {
+    text-decoration: underline;
+}
+
+.grid-categorias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.categoria-item {
     display: flex;
-    padding:2px;
-
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    border-radius: 10px;
+    transition: box-shadow 0.2s ease-in-out;
 }
 
-.card{
-    height: 5rem;
-    width: 3rem;
+.categoria-item:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Body End */
-
-footer{
-    background-color:  var(--cor_header);
-    text-align: center;
-    padding: 2rem;
-    position:relative;
-    bottom:0;
-    width:100%;
+.categoria-item img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    margin-right: 12px;
 }
 
-h1{ 
-    color: #ECDBB6;
+.categoria-item span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
 }
-
-
-
-
-
-
-    
-
