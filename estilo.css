@@ -187,8 +187,8 @@ nav a:hover::after{
 
 @keyframes slide {
     0% { transform: translateX(0); }
-    33.33% { transform: translateX(-50%); } /* Move para a segunda imagem */
-    66.66% { transform: translateX(-100%); } /* Move para a terceira imagem */
+    33.33% { transform: translateX(-40%); } /* Move para a segunda imagem */
+    66.66% { transform: translateX(-70%); } /* Move para a terceira imagem */
     100% { transform: translateX(0); } /* Volta para a primeira imagem */
   }
 
