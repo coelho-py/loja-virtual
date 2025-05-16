@@ -32,3 +32,6 @@ semana 4
   carrinho, checkout, pesquisa de produto e seguranca de conta \
   testes, converter para uma db (mySql), debug e revisao 
   
+wifi: Educação\
+usuário: leandroserafimfarias\
+senha: Lee2860710
