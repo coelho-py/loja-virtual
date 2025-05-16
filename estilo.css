@@ -74,88 +74,9 @@ nav a:hover::after{
     width:80%;
 
 }
-
 /*Fim Nav*/
 
-#foto-perfil{
-    width:30px;
-    height:30px;
-    border-radius: 100px;
-    margin-right: 9px;
-}
-
-#Div-login{
-  align-content: center; 
-
-}
-
-/* DIV Product */
-.categorias {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
-}
-
-.topo-categorias {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 24px;
-}
-
-.topo-categorias h2 {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #333;
-}
-
-.topo-categorias a {
-    font-size: 0.95rem;
-    color: #007bff;
-    text-decoration: none;
-}
-
-.topo-categorias a:hover {
-    text-decoration: underline;
-}
-
-.grid-categorias {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 16px;
-}
-
-.categoria-item {
-    display: flex;
-    align-items: center;
-    background-color: #f9f9f9;
-    border: 1px solid #e0e0e0;
-    padding: 12px;
-    border-radius: 10px;
-    transition: box-shadow 0.2s ease-in-out;
-}
-
-.categoria-item:hover {
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-}
-
-.categoria-item img {
-    width: 56px;
-    height: 56px;
-    object-fit: contain;
-    margin-right: 12px;
-}
-
-.categoria-item span {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #333;
-}
 /*Main Start*/
-
 main {
     padding: 3rem 1rem;
     min-height: 100vh;
@@ -169,7 +90,7 @@ h1{
     height: 5rem;
     width: 3rem;
 }
-/* DIV Product Categoroa*/
+/* DIV Product Categoria Begin*/
 .categorias {
     max-width: 1200px;
     margin: 40px auto;
@@ -286,11 +207,9 @@ h1{
     background-color: #0056b3;
 }
 /* Products Destaque End */
-
 /*Main End*/
 
 /*Slider Start*/
-
 .Slider-box{
     width:100%;
     height:300px;
@@ -316,5 +235,4 @@ h1{
     66.66% { transform: translateX(-65%); } /* Move para a terceira imagem */
     100% { transform: translateX(0); } /* Volta para a primeira imagem */
   }
-
 /*Slider End*/
