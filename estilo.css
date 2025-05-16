@@ -89,6 +89,10 @@ nav a:hover::after{
 
 }
 
+/*Fim Header*/
+
+/*Main Start*/
+
 /* DIV Product */
 .categorias {
     max-width: 1200px;
@@ -154,3 +158,18 @@ nav a:hover::after{
     font-weight: 500;
     color: #333;
 }
+
+/*Products End*/
+
+/*Main End*/
+
+/*Slider Start*/
+
+.Slider-box{
+    width:100%;
+    height: 30px;
+    border:2ppx solid dodgerblue;
+}
+
+
+/*Slider End*/
