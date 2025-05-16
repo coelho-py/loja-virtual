@@ -22,29 +22,6 @@ header{
     padding: 2rem;
 }
 
-main {
-    padding: 3rem 1rem;
-    min-height: 100vh;
-}
-
-footer{
-    background-color:  var(--cor_header);
-    text-align: center;
-    padding: 2rem;
-    position:absolute;
-    bottom:0;
-    width:100%;
-}
-
-h1{ 
-    color: #ECDBB6;
-}
-
-.card{
-    height: 5rem;
-    width: 3rem;
-}
-
 /* Nav */
 
 nav{
@@ -92,6 +69,20 @@ nav a:hover::after{
 /*Fim Header*/
 
 /*Main Start*/
+
+main {
+    padding: 3rem 1rem;
+    min-height: 100vh;
+}
+
+h1{ 
+    color: #ECDBB6;
+}
+
+.card{
+    height: 5rem;
+    width: 3rem;
+}
 
 /* DIV Product */
 .categorias {
@@ -192,3 +183,15 @@ nav a:hover::after{
   }
 
 /*Slider End*/
+
+/*Footer Start*/
+
+footer{
+    background-color:  var(--cor_header);
+    text-align: center;
+    padding: 2rem;
+    bottom:0;
+    width:100%;
+}
+
+/*Footer End*/
