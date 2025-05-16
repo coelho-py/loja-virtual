@@ -179,16 +179,16 @@ nav a:hover::after{
     animation: slide 9s infinite;
 }
 
-.slider img{s
+.slider img{
     height: 100%;
     width: 100%;
-    object-fit:cover;
+    object-fit:cover contain;
 }
 
 @keyframes slide {
     0% { transform: translateX(0); }
     33.33% { transform: translateX(-100%); } /* Move para a segunda imagem */
-    66.66% { transform: translateX(-200%); } /* Move para a terceira imagem */
+    66.66% { transform: translateX(-150%); } /* Move para a terceira imagem */
     100% { transform: translateX(0); } /* Volta para a primeira imagem */
   }
 
