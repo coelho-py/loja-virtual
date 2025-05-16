@@ -12,6 +12,9 @@
 
 body{
     background-color: var(--cor_fundo);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header{
@@ -21,26 +24,7 @@ header{
 
 main {
     padding: 3rem 1rem;
-    min-height: 100vh;
-}
-
-
-footer{
-    background-color:  var(--cor_header);
-    text-align: center;
-    padding: 2rem;
-    position:absolute;
-    bottom:0;
-    width:100%;
-}
-
-h1{ 
-    color: #ECDBB6;
-}
-
-.card{
-    height: 5rem;
-    width: 3rem;
+    flex-grow: 1;
 }
 
 /* Nav */
@@ -86,10 +70,6 @@ h1{
     color: #ECDBB6;
 }
 
-.card{
-    height: 5rem;
-    width: 3rem;
-}
 /* DIV Product Categoria Begin*/
 .categorias {
     max-width: 1200px;
@@ -156,6 +136,7 @@ h1{
     color: #333;
 }
 /*Products Categoria End*/
+
 /* Products Destaque Begin */
 .produtos-destaque {
     padding: 40px;
