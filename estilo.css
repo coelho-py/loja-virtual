@@ -12,16 +12,35 @@
 
 body{
     background-color: var(--cor_fundo);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
-
-/* Header Start*/
 
 header{
     background-color: var(--cor_header);
     padding: 2rem;
+}
+
+main {
+    padding: 3rem 1rem;
+    min-height: 100vh;
+}
+
+
+footer{
+    background-color:  var(--cor_header);
+    text-align: center;
+    padding: 2rem;
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+
+h1{ 
+    color: #ECDBB6;
+}
+
+.card{
+    height: 5rem;
+    width: 3rem;
 }
 
 /* Nav */
@@ -33,9 +52,9 @@ nav{
 
 nav a{
     text-decoration: none;
-    text-align: center;
-    font-size: 10pt;
-    color: whitesmoke;
+    text-align: end;
+    font-size: 18pt;
+    color: #fff;
     padding: 12px 70px 10px 0px;
     position: relative;  
 }
@@ -44,37 +63,23 @@ nav a::after{
     content: " ";
     width: 0%;
     height: 4px;
-    background-color: whitesmoke;
+    background-color: aliceblue;
     position: absolute;
     bottom:0;
     left:0;
-    transition: 0.8s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 nav a:hover::after{
     width:80%;
 
 }
-
-#foto-perfil{
-    width:30px;
-    height:30px;
-    border-radius: 100px;
-    margin-right: 9px;
-}
-
-#Div-login{
-  align-content: center; 
-
-}
-
-/*Fim Header*/
+/*Fim Nav*/
 
 /*Main Start*/
-
 main {
     padding: 3rem 1rem;
-    flex-grow: 1;
+    min-height: 100vh;
 }
 
 h1{ 
@@ -85,7 +90,7 @@ h1{
     height: 5rem;
     width: 3rem;
 }
-/* DIV Product Categoroa*/
+/* DIV Product Categoria Begin*/
 .categorias {
     max-width: 1200px;
     margin: 40px auto;
@@ -202,11 +207,9 @@ h1{
     background-color: #0056b3;
 }
 /* Products Destaque End */
-
 /*Main End*/
 
 /*Slider Start*/
-
 .Slider-box{
     width:100%;
     height:300px;
@@ -233,16 +236,4 @@ h1{
     66.66% { transform: translateX(-65%); } /* Move para a terceira imagem */
     100% { transform: translateX(0); } /* Volta para a primeira imagem */
   }
-
 /*Slider End*/
-
-/*Footer Start*/
-
-footer{
-    background-color:  var(--cor_header);
-    text-align: center;
-    padding: 2rem;
-    width:100%;
-}
-
-/*Footer End*/
