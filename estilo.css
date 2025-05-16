@@ -12,47 +12,14 @@
 
 body{
     background-color: var(--cor_fundo);
+    overflow:hidden;
 }
+
+/* Header Start*/
 
 header{
     background-color: var(--cor_header);
     padding: 2rem;
-}
-
-main{
-    display: flex;
-    padding: 3rem;
-    gap:100px;
-    height:100vhd;
-}
-
-footer{
-    background-color:  var(--cor_header);
-    text-align: center;
-    padding: 2rem;
-    position:absolute;
-    bottom:0;
-    width:100%;
-}
-
-h1{ 
-    color: #ECDBB6;
-}
-
-
-section{
-    border:3px solid black;
-    padding: 1.3rem;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    padding:2px;
-
-}
-
-.card{
-    height: 5rem;
-    width: 3rem;
 }
 
 /* Nav */
@@ -87,8 +54,6 @@ nav a:hover::after{
 
 }
 
-/*Fim Nav*/
-
 #foto-perfil{
     width:30px;
     height:30px;
@@ -100,6 +65,71 @@ nav a:hover::after{
   align-content: center; 
 
 }
+
+/*Fim Nav*/
+
+/*Header End*/
+
+/* Body Start */
+
+main{
+    display: flex;
+    padding: 3rem;
+    gap:100px;
+    height:100vhd;
+}
+
+.Slider-background{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.slide{
+    position:absolute;
+    top: 0;
+    left: 0;
+    background-size: cover ;
+
+}
+
+section{
+    border:3px solid black;
+    padding: 1.3rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding:2px;
+
+}
+
+.card{
+    height: 5rem;
+    width: 3rem;
+}
+
+/* Body End */
+
+footer{
+    background-color:  var(--cor_header);
+    text-align: center;
+    padding: 2rem;
+    position:relative;
+    bottom:0;
+    width:100%;
+}
+
+h1{ 
+    color: #ECDBB6;
+}
+
+
+
+
+
 
     
 
