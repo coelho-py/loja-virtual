@@ -237,3 +237,14 @@ h1{
     100% { transform: translateX(0); } /* Volta para a primeira imagem */
   }
 /*Slider End*/
+
+/*Footer Start*/
+
+footer{
+    background-color:  var(--cor_header);
+    text-align: center;
+    padding: 2rem;
+    width:100%;
+}
+
+/*Footer End*/
