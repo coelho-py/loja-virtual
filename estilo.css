@@ -12,7 +12,9 @@
 
 body{
     background-color: var(--cor_fundo);
-    overflow:hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header Start*/
@@ -72,7 +74,7 @@ nav a:hover::after{
 
 main {
     padding: 3rem 1rem;
-    min-height: 100vh;
+    flex-grow: 1;
 }
 
 h1{ 
