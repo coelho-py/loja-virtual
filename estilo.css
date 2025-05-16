@@ -33,7 +33,7 @@ nav a{
     text-decoration: none;
     text-align: end;
     font-size: 18pt;
-    color: #fb0000;
+    color: #fff;
     padding: 12px 70px 10px 0px;
     position: relative;  
 }
@@ -46,7 +46,7 @@ nav a::after{
     position: absolute;
     bottom:0;
     left:0;
-    transition: 0.5s ease-in-out;
+    transition: 0.8s ease-in-out;
 }
 
 nav a:hover::after{
