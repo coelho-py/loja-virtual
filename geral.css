@@ -28,6 +28,12 @@ main {
 }
 
 /* Nav */
+
+.Nav-box, input{
+    align-items: center;
+}
+
+
 .Nav-box{
     display:flex;
     gap:10px;
