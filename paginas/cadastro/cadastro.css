@@ -1,9 +1,9 @@
 /*Login BEGIN*/
 /* DIV */
-.corpoLogin {
+.corpoCadastro {
     position: flex;
-    width: 550px;
-    height: 300px;
+    width: 570px;
+    height: 320px;
     align-items: center;
     margin-left: 35.5%;
     margin: 40px auto;
@@ -13,22 +13,23 @@
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
   }
   
-  #txtLogin{
+  #txtCadastro{
     display: flex; 
     justify-content: center;
     align-items: center;
   }
   
   /* Input ou botão */
-  .infoLogin {
+  .infoCadastro {
     margin-left: 32%;
   }
   
-  .acessarLogin {
+  .acessarCadastro {
     margin-left: 42%;
   }
   
   /* TXT */
+  
   h1.TitleG {
     text-align: center;
   }
@@ -51,7 +52,7 @@
 
   /* Link */
   a {
-    text-decoration: none; /* Removes the underline */
-    color: blue; /* Optional: Set the link color */
+    text-decoration: none;
+    color: blue;
   }
   /*Login END*/
