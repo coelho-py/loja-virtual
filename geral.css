@@ -30,7 +30,6 @@ main {
 /* Nav */
 .Nav-box{
     display:flex;
-    flex-grow:1;
     gap:10px;
     width:100%;
     border:2px solid #f9f9f9;
@@ -40,6 +39,7 @@ nav{
     text-align: Center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
+    flex-grow: 1;
 }
 
 nav a{
