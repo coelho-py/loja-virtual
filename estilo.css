@@ -29,11 +29,14 @@ main {
 
 /* Nav */
 
+.Nav-box{
+    display:flex;
+    flex-grow:1;
+}
+
 nav{
     text-align: Center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display:flex;
-    flex-grow: 1;
 }
 
 nav a{
@@ -219,8 +222,6 @@ h1{
 }
 /* Products Destaque End */
 /*Main End*/
-
-
 
 /*Footer Start*/
 
