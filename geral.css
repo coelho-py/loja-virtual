@@ -34,12 +34,6 @@ main {
     border-radius: 25px;
 }
 
-.search-box{
-    display: flex;
-    align-content: center;
-    flex-grow: 1;
-}
-
 .Nav-box{
     display: flex;
 }
