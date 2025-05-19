@@ -28,10 +28,10 @@ main {
 }
 
 /* Nav */
-
 .Nav-box{
     display:flex;
     flex-grow:1;
+    gap:10px;
     width:100%;
     border:2px solid #f9f9f9;
 }
@@ -68,12 +68,10 @@ nav a:hover::after{
 /*Fim Nav*/
 
 /*Footer Start*/
-
 footer{
     background-color:  var(--cor_header);
     text-align: center;
     padding: 2rem;
     width:100%;
 }
-
 /*Footer End*/
