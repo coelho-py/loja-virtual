@@ -41,7 +41,6 @@ nav a{
     color: #fff;
     padding: 12px 70px 10px 0px;
     position: relative;  
-    border:#f9f9f9;
 }
 
 nav a::after{
