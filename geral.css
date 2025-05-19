@@ -32,7 +32,7 @@ main {
 .search{
     padding:5px;
     border-radius: 25px;
-    width:400px;
+    min-width: 400px;
 }
 
 .Nav-box{
