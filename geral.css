@@ -39,7 +39,6 @@ nav{
     text-align: Center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
-    flex-grow: 1;
 }
 
 nav a{
@@ -48,7 +47,8 @@ nav a{
     font-size: 10pt;
     color: #fff;
     padding: 12px 70px 10px 0px;
-    position: relative;  
+    position: relative; 
+    flex-grow: 1; 
 }
 
 nav a::after{
