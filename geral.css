@@ -39,6 +39,7 @@ main {
 nav{
     text-align: Center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
 }
 
 nav a{
