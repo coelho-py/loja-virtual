@@ -96,10 +96,6 @@ main {
     min-height: 100vh;
 }
 
-h1{ 
-    color: #ECDBB6;
-}
-
 /* DIV Product Categoria Begin*/
 .categorias {
     max-width: 1200px;
@@ -231,13 +227,7 @@ footer{
 
 /*Footer End*/
 
-.desgreaca{
-    display: block;
-    height: 90px;
-}
-
 /*Login BEGIN*/
-
 /* DIV */
 .corpoLogin {
   position: flex;
