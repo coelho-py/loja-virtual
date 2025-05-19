@@ -32,6 +32,8 @@ main {
 .Nav-box{
     display:flex;
     flex-grow:1;
+    width:100%;
+    border:2px solid #f9f9f9;
 }
 
 nav{
