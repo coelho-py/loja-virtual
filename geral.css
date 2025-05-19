@@ -29,8 +29,17 @@ main {
 
 /* Nav */
 
-.Nav-box, input{
-    align-items: center;
+.search{
+    padding:5px;
+}
+
+.search-box{
+    display: flex;
+    align-content: center;
+}
+
+.Nav-box{
+    display: flex;
 }
 
 
