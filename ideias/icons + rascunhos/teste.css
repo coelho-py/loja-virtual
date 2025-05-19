@@ -1,0 +1,57 @@
+l*footer.footerContainer{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .footerContainer{
+    background-color: var(--cor_principal);
+  }
+  
+  .containerRodape{
+    width: 100%;
+    box-shadow: 0px -1px 6px 0px rgba(0,0,0, 0.1);
+    padding: 5px 15px 15px;
+  }
+  
+  .rodapeSocial{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .rodapeSocial a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: var(--cor_secunda);
+    margin: 10px;
+    border-radius: 50%;
+  }
+  
+  .rodapeSocial a i{
+    font-size: 2em;
+    color: var(--cor_fundo);
+  }
+
+  /*rodapeHB*/
+
+  .rodapeDesc {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  /*rodapeHover*/
+
+  .rodapeSocial a:hover{
+    background-color: var(--cor_principal);
+    transition: 0.5s;
+  }
+  
+  .rodapeSocial a:hover{
+    color: var(--cor_fundo);
+    transition: 0s;
+  }
+  
+  .rodapeDesc > p{
+    font-size: 24px;
+  }
