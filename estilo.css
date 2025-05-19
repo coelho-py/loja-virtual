@@ -229,3 +229,57 @@ footer{
 }
 
 /*Footer End*/
+
+.desgreaca{
+    display: block;
+    height: 90px;
+}
+
+/*Login BEGIN*/
+
+/* DIV */
+.corpoLogin {
+  position: flex;
+  box-shadow: 3px 6px 8px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  width: 550px;
+  height: 300px;
+  align-items: center;
+  margin-left: 35.5%;
+}
+
+#txtLogin{
+  text-align: center;
+}
+
+/* Input ou botão */
+.infoLogin {
+  margin-left: 32%;
+}
+
+.acessarLogin {
+  margin-left: 42%;
+}
+
+/* TXT */
+
+h1.TitleG {
+  text-align: center;
+}
+
+h3.TitleS {
+  text-align: center;
+}
+
+p.subTitleG {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+p.leitura {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+/*Login END*/

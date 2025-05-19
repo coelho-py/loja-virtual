@@ -1,11 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja Virtual</title>
+    <link rel="stylesheet" type="text/css" href="/estilo.css" media="screen"/>
+    <script src="JSLogin.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Árvore de Dados</title>
 </head>
 <body>
     
+    <h1 class="TitleG">BEM VINDO á Árvore de Dados</h1>
+    <div class="corpoLogin">
+            <h3 class="TitleS">Insira suas Informações para acessar a "ADA" ("Árvore de Dados")</h3>
+
+                <p class="leitura">Insira seu NOME:</p>
+                <input id="loginNOME" class="infoLogin" type="text" placeholder="Insira a informação...">
+
+                <p class="leitura">Insira sua IDADE:</p>
+                <input id="loginIDADE" class="infoLogin" type="text" placeholder="Insira a informação...">
+
+                <p class="leitura">Insira sua CIDADE:</p>
+                <input id="loginCIDADE" class="infoLogin" type="text" placeholder="Insira a informação...">
+
+            <br>
+            <button class="acessarLogin" onclick="signUP()">ENTRAR</button>
+            <br><br>
+                <p id="txtLogin"></p>
+        </div>
+    </div>
+
+    <div class="desgreaca"></div>
+    <footer>
+        <h1>footer</h1>
+    </footer>
 </body>
 </html>
