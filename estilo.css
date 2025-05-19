@@ -32,6 +32,7 @@ main {
 .Nav-box{
     display:flex;
     flex-grow:1;
+    gap:10px;
     width:100%;
     border:2px solid #f9f9f9;
 }
@@ -99,6 +100,10 @@ nav a:hover::after{
 main {
     padding: 3rem 1rem;
     min-height: 100vh;
+}
+
+h1{ 
+    color: #ECDBB6;
 }
 
 /* DIV Product Categoria Begin*/
@@ -232,7 +237,13 @@ footer{
 
 /*Footer End*/
 
+.desgreaca{
+    display: block;
+    height: 90px;
+}
+
 /*Login BEGIN*/
+
 /* DIV */
 .corpoLogin {
   position: flex;
