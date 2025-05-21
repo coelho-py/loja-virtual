@@ -8,7 +8,7 @@
     margin-left: 35.5%;
     margin: 40px auto;
     padding: 20px;
-    background-color: #fff;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
     border-radius: 12px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
     gap: 50px;
