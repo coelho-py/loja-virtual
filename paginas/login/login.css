@@ -50,6 +50,12 @@
     font-size: 14px;
   }
 
+.box-item{
+  padding: 20px;
+  border:2px solid black
+}
+
+
   /* Link */
   a {
     text-decoration: none; /* Removes the underline */
