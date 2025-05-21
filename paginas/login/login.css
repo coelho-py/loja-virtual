@@ -8,7 +8,7 @@
     margin-left: 35.5%;
     margin: 40px auto;
     padding: 20px;
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background: linear-gradient(90deg,rgba(4, 0, 66, 1) 10%, rgba(121, 9, 112, 1) 58%, rgba(0, 212, 255, 1) 97%);
     border-radius: 12px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
     gap: 50px;
