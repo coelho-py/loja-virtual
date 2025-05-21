@@ -3,7 +3,7 @@
 .corpoLogin {
     position: flex;
     width: 550px;
-    height: 300px;
+    height: auto;
     align-items: center;
     margin-left: 35.5%;
     margin: 40px auto;
