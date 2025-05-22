@@ -35,6 +35,11 @@ main {
     min-width: 400px;
 }
 
+.search-box{
+    display: flex;
+    
+}
+
 .Nav-box{
     display: flex;
 }
