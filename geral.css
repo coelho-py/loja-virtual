@@ -40,7 +40,10 @@ main {
     flex-grow: 1;
     gap:20px;
     align-items: center;
-    color:#fff;
+}
+
+.lupa{
+    color:#FFF;
 }
 
 .Nav-box{
