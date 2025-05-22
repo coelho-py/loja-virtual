@@ -35,7 +35,7 @@ main {
     min-width: 400px;
 }
 
-.search-box, a{
+.search-box a{
     display: flex;
     flex-grow: 1;
     gap:20px;
