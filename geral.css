@@ -32,13 +32,13 @@ main {
 .search{
     padding:5px;
     border-radius: 7px;
-    min-width: 400px;
+    min-width: 200px;
 }
 
 .search-box {
     display: flex;
     flex-grow: 1;
-    gap:20px;
+    gap:10px;
     align-items: center;
 }
 
