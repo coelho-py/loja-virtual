@@ -32,7 +32,7 @@ main {
 .search{
     padding:5px;
     border-radius: 7px;
-    min-width: 200px;
+    min-width: 300px;
 }
 
 .search-box {
@@ -157,5 +157,33 @@ footer{
     text-align: center;
     padding: 2rem;
     width:100%;
+    display:grid;
+
+}
+
+.box-item{
+    grid:
+
+}
+
+.info{
+    border: 2px solid #ffffff;
+    height: 50px;
+    width: 60px;
+    padding: 1rem;
+    background-color: aqua;
+}
+
+.footer1{
+    grid-area: Um;
+}
+.footer2{
+    grid-area: Dois;
+}
+.footer3{
+    grid-area: Tres;
+}
+.footer4{
+    grid-area: Quatro;
 }
 /*Footer End*/
