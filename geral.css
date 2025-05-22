@@ -35,10 +35,12 @@ main {
     min-width: 400px;
 }
 
-.search-box{
+.search-box, a{
     display: flex;
     flex-grow: 1;
     gap:20px;
+    align-items: center;
+    color:#fff;
 }
 
 .Nav-box{
