@@ -162,8 +162,9 @@ footer{
 }
 
 .box-item{
-    grid:
-
+    grid:;
+    width: 100%;
+    height: auto;
 }
 
 .info{
