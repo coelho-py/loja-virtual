@@ -1,0 +1,23 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/geral.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/logs.css' %}">
+
+<h2>Registro</h2>
+
+<form method="post">
+  {% csrf_token %}
+  {% if messages %}
+  {% for message in messages %}
+  <div class="error">{{ message }}</div>
+  {% endfor %}
+  {% endif %}
+  <input type="text" name="username" placeholder="Usuário"><br>
+  <input type="email" name="email" placeholder="Email"><br>
+  <input type="text" name="mobile" placeholder="Telefone" maxlength="10"><br>
+  <input type="password" name="senha" placeholder="Senha"><br>
+  <input type="password" name="confirmar_senha" placeholder="Confirmar Senha"><br>
+  <button type="submit">Registrar</button>
+</form>
+<a href="{% url 'login' %}">Já tem conta? Faça login</a>
