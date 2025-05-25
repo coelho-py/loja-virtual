@@ -1,1 +1,57 @@
 https://www.macoratti.net/asp_50.htm
+
+
+CREATE TABLE categoria ( 
+ idCategoria INT PRIMARY KEY AUTO_INCREMENT,  
+ nomeCategoria VARCHAR(n) NOT NULL,  
+); 
+
+CREATE TABLE produtos ( 
+ idProdutos INT PRIMARY KEY AUTO_INCREMENT,  
+ nome VARCHAR(n) NOT NULL,  
+ descricao VARCHAR(n) NOT NULL,  
+ urlImagem VARCHAR(n) NOT NULL,  
+ valor FLOAT NOT NULL,  
+ idCategoria INT,  
+); 
+
+CREATE TABLE usuario ( 
+ nome VARCHAR(n) NOT NULL,  
+ telefone INT NOT NULL,  
+ email VARCHAR(n) NOT NULL,  
+ sexo CHAR(n) NOT NULL,  
+ cpf INT NOT NULL,  
+ senha VARCHAR(n) NOT NULL,  
+ idEndereco INT,  
+ idUsario INT PRIMARY KEY AUTO_INCREMENT,  
+ UNIQUE (email,cpf)
+); 
+
+CREATE TABLE endereco ( 
+ rua VARCHAR(n) NOT NULL,  
+ numero INT NOT NULL,  
+ cidade VARCHAR(n) NOT NULL,  
+ estado VARCHAR(n) NOT NULL,  
+ complemento VARCHAR(n) NOT NULL,  
+ idEndereco INT PRIMARY KEY AUTO_INCREMENT,  
+ cep INT NOT NULL,  
+); 
+
+CREATE TABLE pedido ( 
+ cliente VARCHAR(n) NOT NULL,  
+ idPedido INT PRIMARY KEY AUTO_INCREMENT,  
+ idProdutos INT NOT NULL,  
+ valorProduto FLOAT NOT NULL,  
+ quantidade INT NOT NULL,  
+ dataProduto DATE NOT NULL,  
+ fechado CHAR(n) NOT NULL,  
+ cartão VARCHAR(n) NOT NULL,  
+ idusuario INT,  
+ idprodutos INT,  
+); 
+
+ALTER TABLE produtos ADD FOREIGN KEY(idCategoria) REFERENCES categoria (idCategoria)
+ALTER TABLE usuario ADD FOREIGN KEY(idEndereco) REFERENCES endereco (idEndereco)
+ALTER TABLE pedido ADD FOREIGN KEY(idProdutos) REFERENCES produtos (idProdutos)
+ALTER TABLE pedido ADD FOREIGN KEY(idusuario) REFERENCES usuario (idusuario)
+ALTER TABLE pedido ADD FOREIGN KEY(idprodutos) REFERENCES produtos (idprodutos)
