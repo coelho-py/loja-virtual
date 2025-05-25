@@ -1,0 +1,190 @@
+:root{
+    --cor_fundo: #f0f0d8;
+    --cor_header: #604848;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--cor_fundo);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header{
+    background-color: var(--cor_header);
+    padding: 2rem;
+}
+
+main {
+    padding: 3rem 1rem;
+    flex-grow: 1;
+}
+
+/* Nav */
+
+.search{
+    padding:5px;
+    border-radius: 7px;
+    min-width: 300px;
+}
+
+.search-box {
+    display: flex;
+    flex-grow: 1;
+    gap:10px;
+    align-items: center;
+}
+
+#lupa{
+    color:#FFF;
+}
+
+.Nav-box{
+    display: flex;
+}
+
+
+.Nav-box{
+    display:flex;
+    gap:10px;
+    width:100%;
+}
+
+nav{
+    text-align: Center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+}
+
+nav a{
+    text-decoration: none;
+    text-align: end;
+    font-size: 10pt;
+    color: #ffffff;
+    padding: 12px 70px 10px 0px;
+    position: relative; 
+    flex-grow: 1; 
+}
+
+nav a::after{
+    content: " ";
+    width: 0%;
+    height: 4px;
+    background-color: aliceblue;
+    position: absolute;
+    bottom:0;
+    left:0;
+    transition: 0.5s ease-in-out;
+}
+
+nav a:hover::after{
+    width:80%;
+
+}
+
+/*Mobile Start*/
+
+@media (max-width: 768px) {
+    .search {
+        min-width: auto; 
+        width: 90%; 
+        margin: 10px auto; 
+    }
+
+    .Nav-box {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px; 
+    }
+
+    nav {
+        text-align: center; 
+    }
+
+    nav a {
+        text-align: center;
+        padding: 10px 20px; 
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+
+    nav a::after {
+        left: 50%; 
+        transform: translateX(-50%); 
+    }
+
+    nav a:hover::after {
+        width: 60%; 
+    }
+}
+
+/* Estilos para telas um pouco maiores que mobile  */
+@media (min-width: 769px) and (max-width: 992px) {
+    .search {
+        min-width: auto;
+        width: 70%;
+        margin: 10px auto;
+    }
+
+    .Nav-box {
+        justify-content: center; 
+        gap: 15px;
+    }
+
+    nav a {
+        padding: 12px 40px 10px 0px; 
+    }
+
+    nav a:hover::after {
+        width: 70%; 
+    }
+}
+
+/*Mobile End*/
+
+/*Fim Nav*/
+
+/*Footer Start*/
+footer{
+    background-color:  var(--cor_header);
+    text-align: center;
+    padding: 2rem;
+    width:100%;
+    display:grid;
+
+}
+
+.box-item{
+    grid: block;
+    width: 100%;
+    height: auto;
+}
+
+.info{
+    border: 2px solid #ffffff;
+    height: 50px;
+    width: 60px;
+    padding: 1rem;
+    background-color: aqua;
+}
+
+.footer1{
+    grid-area: Um;
+}
+.footer2{
+    grid-area: Dois;
+}
+.footer3{
+    grid-area: Tres;
+}
+.footer4{
+    grid-area: Quatro;
+}
+/*Footer End*/
