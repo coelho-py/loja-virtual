@@ -2,56 +2,53 @@ https://www.macoratti.net/asp_50.htm
 
 
 CREATE TABLE categoria ( 
- idCategoria INT PRIMARY KEY AUTO_INCREMENT,  
- nomeCategoria VARCHAR(n) NOT NULL,  
+    idCategoria INT PRIMARY KEY AUTO_INCREMENT,  
+    nomeCategoria VARCHAR(100) NOT NULL  
 ); 
 
 CREATE TABLE produtos ( 
- idProdutos INT PRIMARY KEY AUTO_INCREMENT,  
- nome VARCHAR(n) NOT NULL,  
- descricao VARCHAR(n) NOT NULL,  
- urlImagem VARCHAR(n) NOT NULL,  
- valor FLOAT NOT NULL,  
- idCategoria INT,  
-); 
-
-CREATE TABLE usuario ( 
- nome VARCHAR(n) NOT NULL,  
- telefone INT NOT NULL,  
- email VARCHAR(n) NOT NULL,  
- sexo CHAR(n) NOT NULL,  
- cpf INT NOT NULL,  
- senha VARCHAR(n) NOT NULL,  
- idEndereco INT,  
- idUsario INT PRIMARY KEY AUTO_INCREMENT,  
- UNIQUE (email,cpf)
+    idProduto INT PRIMARY KEY AUTO_INCREMENT,  
+    nome VARCHAR(100) NOT NULL,  
+    descricao TEXT NOT NULL,  
+    urlImagem VARCHAR(255) NOT NULL,  
+    valor DECIMAL(10,2) NOT NULL,  
+    idCategoria INT,
+    FOREIGN KEY (idCategoria) REFERENCES categoria(idCategoria)
 ); 
 
 CREATE TABLE endereco ( 
- rua VARCHAR(n) NOT NULL,  
- numero INT NOT NULL,  
- cidade VARCHAR(n) NOT NULL,  
- estado VARCHAR(n) NOT NULL,  
- complemento VARCHAR(n) NOT NULL,  
- idEndereco INT PRIMARY KEY AUTO_INCREMENT,  
- cep INT NOT NULL,  
+    idEndereco INT PRIMARY KEY AUTO_INCREMENT,  
+    rua VARCHAR(100) NOT NULL,  
+    numero INT NOT NULL,  
+    cidade VARCHAR(100) NOT NULL,  
+    estado VARCHAR(50) NOT NULL,  
+    complemento VARCHAR(100),  
+    cep VARCHAR(10) NOT NULL  
+); 
+
+CREATE TABLE usuario ( 
+    idUsuario INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,  
+    telefone VARCHAR(15) NOT NULL,  
+    email VARCHAR(100) NOT NULL,  
+    sexo CHAR(1) NOT NULL,  
+    cpf VARCHAR(14) NOT NULL,  
+    senha VARCHAR(100) NOT NULL,  
+    idEndereco INT,
+    UNIQUE (email, cpf),
+    FOREIGN KEY (idEndereco) REFERENCES endereco(idEndereco)
 ); 
 
 CREATE TABLE pedido ( 
- cliente VARCHAR(n) NOT NULL,  
- idPedido INT PRIMARY KEY AUTO_INCREMENT,  
- idProdutos INT NOT NULL,  
- valorProduto FLOAT NOT NULL,  
- quantidade INT NOT NULL,  
- dataProduto DATE NOT NULL,  
- fechado CHAR(n) NOT NULL,  
- cartão VARCHAR(n) NOT NULL,  
- idusuario INT,  
- idprodutos INT,  
-); 
-
-ALTER TABLE produtos ADD FOREIGN KEY(idCategoria) REFERENCES categoria (idCategoria)
-ALTER TABLE usuario ADD FOREIGN KEY(idEndereco) REFERENCES endereco (idEndereco)
-ALTER TABLE pedido ADD FOREIGN KEY(idProdutos) REFERENCES produtos (idProdutos)
-ALTER TABLE pedido ADD FOREIGN KEY(idusuario) REFERENCES usuario (idusuario)
-ALTER TABLE pedido ADD FOREIGN KEY(idprodutos) REFERENCES produtos (idprodutos)
+    idPedido INT PRIMARY KEY AUTO_INCREMENT,
+    cliente VARCHAR(100) NOT NULL,
+    idProduto INT NOT NULL,  
+    valorProduto DECIMAL(10,2) NOT NULL,  
+    quantidade INT NOT NULL,  
+    dataProduto DATE NOT NULL,  
+    fechado CHAR(1) NOT NULL,  
+    cartao VARCHAR(20) NOT NULL,  
+    idUsuario INT NOT NULL,
+    FOREIGN KEY (idProduto) REFERENCES produtos(idProduto),
+    FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario)
+);
