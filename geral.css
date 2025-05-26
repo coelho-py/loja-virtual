@@ -164,6 +164,7 @@ footer{
     width:auto;
     height: auto;
     display: flex;
+    border:2px solid white
 }
 
 .info{
@@ -172,5 +173,8 @@ footer{
     width: 60px;
     padding: 1rem;
     background-color: aqua;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    max-width: 600px;
 }
 /*Footer End*/
