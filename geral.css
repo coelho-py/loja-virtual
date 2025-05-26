@@ -157,14 +157,13 @@ footer{
     text-align: center;
     padding: 2rem;
     width:100%;
-    display:grid;
-
 }
 
 .box-item{
-    grid: block;
-    width: 100%;
+    width:auto;
     height: auto;
+    display: flex;
+    border:2px solid white
 }
 
 .info{
@@ -173,18 +172,8 @@ footer{
     width: 60px;
     padding: 1rem;
     background-color: aqua;
-}
-
-.footer1{
-    grid-area: Um;
-}
-.footer2{
-    grid-area: Dois;
-}
-.footer3{
-    grid-area: Tres;
-}
-.footer4{
-    grid-area: Quatro;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    max-width: 600px;
 }
 /*Footer End*/
