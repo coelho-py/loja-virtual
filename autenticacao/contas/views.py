@@ -55,4 +55,4 @@ def home_view(request):
 
 @login_required
 def favoritos_view(request):
-    return render(request, 'myapp/favoritos.html', {})
+    return render(request, 'login/favoritos.html', {})
