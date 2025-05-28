@@ -23,9 +23,9 @@
             </div>
 
             <nav>
-                <a href="paginas\Produtos\favoritos.html"><i class="fa fa-heart"></i> Favoritos</a>
+                <a href="{% url 'favoritos' %}"><i class="fa fa-heart"></i> Favoritos</a>
                 <a href=""><i class="fa fa-shopping-cart"></i> Carrinho</a>
-                <a href=""><i class="fa fa-wrench"></i> Produtor</a>
+                <a href="paginas\login\produtos.html"><i class="fa fa-wrench"></i> Produtor</a>
                 <a href="{% url 'login'  %}"><i class="fa fa-user-circle"></i> Entrar ou Cadastrar</a>
                 <a href=""><i class="fa fa-bars"></i> Menu</a>
                 <a href="{% url 'logout' %}">Sair</a>
