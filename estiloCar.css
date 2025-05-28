@@ -3,3 +3,31 @@
     --cor_header: #604848;
 
 }
+body { font-family: Arial, sans-serif; margin: 20px; }
+.cart-items { margin-top: 20px; }
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--cor_fundo);
+    padding: 10px 0;
+}
+.cart-item:last-child { border-bottom: none; }
+.cart-total {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: right;
+    border-top: 2px solid #eee;
+    padding-top: 10px;
+}
+.remove-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.remove-btn:hover { background-color: #c82333; }
+a { color: #007bff; text-decoration: none; }
