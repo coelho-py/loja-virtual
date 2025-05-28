@@ -37,3 +37,6 @@ usuário: leandroserafimfarias\
 senha: Lee2860710\
 
 https://www.canva.com/design/DAGnhgQKQyw/Z4_7wp1rXIGGgItsUG5HTg/edit
+
+Subir o servidor no VsCode: Cd .\autenticacao\
+                            python manage.py runserver
