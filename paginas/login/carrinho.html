@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estiloCar.css">
+    <title>Carrinho</title>
+    <h1>Seu Carrinho lindo</h1>
+</head>
+<body>
+    <div id="car-items">
+        <p id="em-cart-mensa">seu Carrinho está vazio </p>
+    </div>
+     <div class="cart-total">
+        Total: R$ <span id="cart-total">0.00</span>
+     </div>
+     <a href="home.html">Voltar para a página do produto</a>
+     <script>
+        const cartItemsDiv = document.getElementById('cart-items');
+        const cartTotalSpan = document.getElementById('cart-total');
+        const emptyCartMessage = document.getElementById('empty-cart-message');
+
+        let cart = [];
+
+        function loadCartFromLocalStorage() {
+            const storedCart = localStorage.getItem('cart');
+            if (storedCart) {
+                cart = JSON.parse(storedCart);
+            }
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            cartItemsDiv.innerHTML = '';
+            let total = 0;
+
+            if (cart.length === 0) {
+                emptyCartMessage.style.display = 'block';
+            } else {
+                emptyCartMessage.style.display = 'none';
+                cart.forEach((item, index) => {
+                    const cartItemDiv = document.createElement('div');
+                    cartItemDiv.classList.add('cart-item');
+                    cartItemDiv.innerHTML = `
+                        <span>${item.name} (x${item.quantity || 1}) - R$ ${(item.price * (item.quantity || 1)).toFixed(2)}</span>
+                        <button class="remove-btn" data-index="${index}">Remover</button>
+                    `;
+                    cartItemsDiv.appendChild(cartItemDiv);
+                    total += item.price * (item.quantity || 1);
+                });
+            }
+
+            cartTotalSpan.textContent = total.toFixed(2);
+            localStorage.setItem('cart', JSON.stringify(cart)); // Salva o carrinho atualizado após qualquer alteração
+        }
+
+        cartItemsDiv.addEventListener('click', (event) => {
+            if (event.target.classList.contains('remove-btn')) {
+                const indexToRemove = parseInt(event.target.dataset.index);
+                cart.splice(indexToRemove, 1);
+                updateCartDisplay();
+            }
+        });
+
+        // Carrega o carrinho quando a página é carregada
+        document.addEventListener('DOMContentLoaded', loadCartFromLocalStorage);
+    </script>
+</body>
+</html>

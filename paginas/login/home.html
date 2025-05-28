@@ -23,7 +23,7 @@
             </div>
 
             <nav>
-                <a href=""><i class="fa fa-heart"></i> Favoritos</a>
+                <a href="paginas\Produtos\favoritos.html"><i class="fa fa-heart"></i> Favoritos</a>
                 <a href=""><i class="fa fa-shopping-cart"></i> Carrinho</a>
                 <a href=""><i class="fa fa-wrench"></i> Produtor</a>
                 <a href="{% url 'login'  %}"><i class="fa fa-user-circle"></i> Entrar ou Cadastrar</a>
@@ -32,13 +32,12 @@
             </nav>
 
         </div>
-        
 
     </header>
 
     <div class="Slider-box">
         <div class="slider">
-            <img src="imagens\images.png" alt="">
+            <img src="{% imagens imagens\images.png}" alt="">
             <img src="imagens\images.png" alt="">
             <img src="imagens\images.png" alt="">
         </div>
@@ -52,7 +51,7 @@
                 <div class="produto">
                     <img src="imagens/images.png" alt="Produto 1">
                     <h3>Produto 1</h3>
-                    <p>Descrição do produto 1.</p>
+                    <p>Cintaralho Tamanho: HERIQUE</p>
                     <div class="preco">R$ 00,00</div>
                     <button>Comprar</button>
                 </div>
