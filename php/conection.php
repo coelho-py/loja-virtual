@@ -5,14 +5,11 @@ $password = "";
 $dbName = "loja";
 $host = "localhost";
 
-$db = new mysqli($host, $user, $password, $dbName) or die("cant connect");
-
-/*try{
+try{
   // metodo de conexao do banco de dados em php
-  $pdo = new PDO("mysql:host=$host; dbName=$dbName, $user, $password");
+  $db = new mysqli($host, $user, $password, $dbName) or die("cant connect");
 
 } catch (PDOException $err) {
-
    echo $err->getMessage();
 }
-?>*/
+?>
