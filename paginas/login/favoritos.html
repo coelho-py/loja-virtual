@@ -3,38 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="geral.css">
-    <title>Loja Virtual</title>
-</head>
+    
+    <title>Loja Virtual</title> </head>
 <body>
     <header>
-
-        <nav>
-            <a href=""><i class="fa fa-heart"></i> Favoritos</a>
-            <a href=""><i class="fa fa-shopping-cart"></i> Carrinho</a>
-            <a href=""><i class="fa fa-wrench"></i> Produtor</a>
-            <a href="paginas/login/login.html"><i class="fa fa-user-circle"></i> Entrar ou Cadastrar</a>
-            <a href=""><i class="fa fa-bars"></i> Menu</a>
-            <a href="{% url 'logout' %}">Sair</a>
-        </nav>
-
+        <div class="Nav-box">
+            <div class="search-box">
+                <a href=""><i class="fa fa-search" id="lupa"></i></a>
+                <input type="search" name="" class="search" placeholder="Search . . . . .">
+            </div>
+            <nav>
+                <a href="{% url 'favoritos' %}"><i class="fa fa-heart"></i> Favoritos</a>
+                <a href=""><i class="fa fa-shopping-cart"></i> Carrinho</a>
+                <a href=""><i class="fa fa-wrench"></i> Produtor</a>
+                <a href="{% url 'login' %}"><i class="fa fa-user-circle"></i> Entrar ou Cadastrar</a>
+                <a href=""><i class="fa fa-bars"></i> Menu</a>
+                <a href="{% url 'logout' %}">Sair</a>
+            </nav>
+        </div>
     </header>
+
     <main>
+        <div class="Side-Bar">
+            <h2>Categorias</h2>
+            <ul>letrônico
+                <li><a href="#">Es</a></li>
+                <li><a href="#">Moda</a></li>
+                <li><a href="#">Casa e Decoração</a></li>
+                <li><a href="#">Esportes</a></li>
+                <li><a href="#">Livros</a></li>
+                <li><a href="#">Outros</a></li>
+            </ul>
+            <hr>
+            <h2>Preço</h2>
+            <div class="price-filter">
+                <input type="number" placeholder="Min" class="price-input" id="min-price">
+                <span>-</span>
+                <input type="number" placeholder="Max" class="price-input" id="max-price">
+                <button id="apply-price-filter">Aplicar</button>
+            </div>
+        </div>
 
+        <div class="Content-main">
+            <h1>Produtos Disponíveis</h1>
+            <div class="sort-options">
+                <span>Ordenar por:</span>
+                <select id="sort-by">
+                    <option value="relevance">Relevância</option>
+                    <option value="price-asc">Menor Preço</option>
+                    <option value="price-desc">Maior Preço</option>
+                    <option value="name-asc">Nome (A-Z)</option>
+                </select>
+            </div>
+            <div class="products-grid" id="products-list">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x200?text=Produto+1" alt="Nome do Produto 1">
+                    <div class="product-info">
+                        <h3 class="product-title">Smartphone X</h3>
+                        <p class="product-price">R$ 1.299,99</p>
+                        <button class="add-to-cart-btn" data-id="1" data-name="Smartphone X" data-price="1299.99">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
 
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x200?text=Produto+2" alt="Nome do Produto 2">
+                    <div class="product-info">
+                        <h3 class="product-title">Fone de Ouvido Bluetooth</h3>
+                        <p class="product-price">R$ 199,90</p>
+                        <button class="add-to-cart-btn" data-id="2" data-name="Fone de Ouvido Bluetooth" data-price="199.90">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x200?text=Produto+3" alt="Nome do Produto 3">
+                    <div class="product-info">
+                        <h3 class="product-title">Smartwatch Modelo Y</h3>
+                        <p class="product-price">R$ 450,00</p>
+                        <button class="add-to-cart-btn" data-id="3" data-name="Smartwatch Modelo Y" data-price="450.00">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+                </div>
+            <div class="pagination">
+                <button class="page-btn" disabled>Anterior</button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">Próxima</button>
+            </div>
+        </div>
     </main>
 
     <footer>
         <div class="box-item">
-
-            <div class="info footer1">1</div>
-            <div class="info footer2">2</div>
-            <div class="info footer3">3</div>
-            <div class="info footer4">4</div>
-
+            <div class="info footer1">Endereço</div>
+            <div class="info footer2">Contato</div>
+            <div class="info footer3">Redes Sociais</div>
+            <div class="info footer4">Sobre Nós</div>
         </div>
-
     </footer>
-    
-</body>
+
+    <script src="{% static 'js/carrinho.js' %}"></script> <script src="{% static 'js/produtos.js' %}"></script> </body>
 </html>

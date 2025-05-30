@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="C:\Users\aluno\Desktop\teste\estilo.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/favoritos.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/geral.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/logs.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/produtos.css' %}"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Loja Virtual - Produtos</title> </head>
+    <title>Loja Virtual</title> </head>
 <body>
     <header>
         <div class="Nav-box">
@@ -16,7 +16,7 @@
                 <input type="search" name="" class="search" placeholder="Search . . . . .">
             </div>
             <nav>
-                <a href="paginas\Produtos\favoritos.html"><i class="fa fa-heart"></i> Favoritos</a>
+                <a href="{% url 'favoritos' %}"><i class="fa fa-heart"></i> Favoritos</a>
                 <a href=""><i class="fa fa-shopping-cart"></i> Carrinho</a>
                 <a href=""><i class="fa fa-wrench"></i> Produtor</a>
                 <a href="{% url 'login' %}"><i class="fa fa-user-circle"></i> Entrar ou Cadastrar</a>
@@ -29,8 +29,8 @@
     <main>
         <div class="Side-Bar">
             <h2>Categorias</h2>
-            <ul>
-                <li><a href="#">Eletrônicos</a></li>
+            <ul>letrônico
+                <li><a href="#">Es</a></li>
                 <li><a href="#">Moda</a></li>
                 <li><a href="#">Casa e Decoração</a></li>
                 <li><a href="#">Esportes</a></li>

@@ -52,3 +52,7 @@ def logout_view(request):
 @login_required(login_url='login')
 def home_view(request):
     return render(request, 'login/home.html')
+
+@login_required
+def favoritos_view(request):
+    return render(request, 'login/favoritos.html', {})
