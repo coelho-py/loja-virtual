@@ -1,56 +1,73 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Loja Virtual</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/geral.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/logs.css' %}">
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
+<header>
+    <div class="Nav-box">
+        <div class="search-box">
+            <a href=""><i class="fa fa-search" id="lupa"></i></a>
+            <input type="search" name="" class="search" placeholder="Search . . . . .">
+        </div>
+        <nav>
+            <a href="{% url 'home' %}"><i class="fa fa-heart"></i> home</a>  <!--(para testar, tem que por o icone no lugar)-->
+            <a href="{% url 'favoritos' %}"><i class="fa fa-heart"></i> Favoritos</a>
+            <a href="{% url 'carrinho' %}"><i class="fa fa-shopping-cart"></i> Carrinho</a>
+            <a href=""><i class="fa fa-wrench"></i> Produtor</a>
+            <a href=""><i class="fa fa-bars"></i> Menu</a>
+        </nav>
+    </div>
+</header>
 <body>
     <main>
         <h1 class="TitleG">BEM VINDO á Yggdrasil E-Commerce!<br>Entrar</h1>
-        <div id="corpoLogs">    
-                <h3 class="TitleS">Insira suas Informações para acessar a "Yggdrasil"</h3>
-                    <br>
-                    <form action="" method="post">
-                        <table class="login">
-                            {% csrf_token %}
-                            <tr>
-                                <td colspan="2" style="text-align:center;"><strong>Entrar</strong></td>
-                            </tr>
-                            <tr>
-                                <td>Usuário:</td>
-                                <td><input type="text" name="username" placeholder="Usuário" required></td>
-                            </tr>
-                            <tr>
-                                <td>Senha:</td>
-                                <td><input type="password" name="senha" placeholder="Senha" required></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <input type="submit" value="Entrar">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <div class="link">
-                                        <p class="leitura">Não tem conta?<a href="{% url 'registro' %}"> Cadastre-se</a></p>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </form>
-                <br>
-                {% if messages %}
-                {% for message in messages %}
-                    <div class="error">{{ message }}</div>
-                {% endfor %}
-                {% endif %}
-            </div>
+        <div id="corpoLogs">
+            <h3 class="TitleS">Insira suas Informações para acessar a "Yggdrasil"</h3>
+            <br>
+            <form action="" method="post">
+                <table class="login">
+                    {% csrf_token %}
+                    <tr>
+                        <td colspan="2" style="text-align:center;"><strong>Entrar</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Usuário:</td>
+                        <td><input type="text" name="username" placeholder="Usuário" required></td>
+                    </tr>
+                    <tr>
+                        <td>Senha:</td>
+                        <td><input type="password" name="senha" placeholder="Senha" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="Entrar">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="link">
+                                <p class="leitura">Não tem conta?<a href="{% url 'registro' %}"> Cadastre-se</a></p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <br>
+            {% if messages %}
+            {% for message in messages %}
+            <div class="error">{{ message }}</div>
+            {% endfor %}
+            {% endif %}
+        </div>
         </div>
     </main>
     </div>
@@ -59,4 +76,5 @@
         <h1>footer</h1>
     </footer>
 </body>
+
 </html>
