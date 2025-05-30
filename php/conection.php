@@ -12,11 +12,4 @@ try{
 } catch (PDOException $err) {
    echo $err->getMessage();
 }
-
-  $nome = $_POST['nome'];
-  $nome = $_POST[''];
-  $nome = $_POST[''];
-  $nome = $_POST[''];
-  $nome = $_POST[''];
-  $nome = $_POST[''];
 ?>
