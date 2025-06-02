@@ -40,3 +40,6 @@ https://www.canva.com/design/DAGnhgQKQyw/Z4_7wp1rXIGGgItsUG5HTg/edit
 
 Subir o servidor no VsCode: Cd .\autenticacao\
                             python manage.py runserver
+
+                Link do Video do Bootstrap:
+                    https://youtu.be/maoHDmRu3z4?si=MAtJ7VjQjZ_pACeI
