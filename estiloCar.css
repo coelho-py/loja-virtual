@@ -12,6 +12,10 @@ body { font-family: Arial, sans-serif; margin: 20px; }
     border-bottom: var(--cor_fundo);
     padding: 10px 0;
 }
+*{
+    background-color: var(--cor_fundo);
+    background-color: var(--cor_header);
+}
 .cart-item:last-child { border-bottom: none; }
 .cart-total {
     margin-top: 20px;
