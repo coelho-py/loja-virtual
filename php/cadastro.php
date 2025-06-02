@@ -2,7 +2,7 @@
 if (isset($_POST['submit'])) {
     //manda os dados do formulário para o banco de dados
 
-    include_once 'conexao.php';
+    include_once 'conection.php';
 
     $nome = $_POST['nome'];
     $cpf = $_POST['cpf'];
@@ -12,8 +12,8 @@ if (isset($_POST['submit'])) {
     $sexo = $_POST['genero'];
     $senha = $_POST['senha'];
 
-    $envio = mysqli_query($db,"INSERT INTO usuario (nome, cpf, nascimento, telefone, email, genero, senha)"    
-        . "VALUES ('$nome', '$cpf', '$nascimento', '$telefone', '$email', '$sexo', '$senha')");
+    $envio = mysqli_query($db, "INSERT INTO usuario (nome, cpf, nascimento, telefone, email, sexo, senha) 
+        VALUES ('$nome', '$cpf', '$nascimento', '$telefone', '$email', '$sexo', '$senha')");
 
     /*print_r($_POST['nome']);    
     print_r($_POST['cpf']);
@@ -77,12 +77,12 @@ if (isset($_POST['submit'])) {
                     </tr>
                     <tr>
                         <td>Informe-nos seu genero:</td>
-                        <td><input type="radio" name="genero" id="masculino"></input></td><br>
-                        <label for="masculino">Masculino</label>
-                        <td><input type="radio" name="genero" id="feminino"></input></td><br>
-                        <label for="feminino">Feminino</label>
-                        <td><input type="radio" name="genero" id="outro"></input></td><br>
-                        <label for="outro">Outro</label>
+                        <td><input type="radio" name="genero" id="masculino" value="masculino"></input></td><br>
+                        <td><label for="masculino">Masculino</label></td>
+                        <td><input type="radio" name="genero" id="feminino" value="feminino"></input></td><br>
+                        <td><label for="feminino">Feminino</label></td>
+                        <td><input type="radio" name="genero" id="outro" value="outro"></input></td><br>
+                        <td><label for="outro">Outro</label></td>
                     </tr>
                     <tr>
                         <td>Senha:</td>
