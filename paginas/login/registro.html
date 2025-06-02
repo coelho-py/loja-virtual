@@ -1,27 +1,45 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loja Virtual</title>
-  <link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
-  <link rel="stylesheet" type="text/css" href="{% static 'css/geral.css' %}">
-  <link rel="stylesheet" type="text/css" href="{% static 'css/logs.css' %}">
-  <link rel="stylesheet" type="text/css" href="{% static 'js/geral.js' %}">
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <meta charset="UTF-8">
+    <title>Loja Virtual</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/geral.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/logs.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
 </head>
+
+<header>
+    <div class="Nav-box">
+        <div class="search-box">
+            <a href=""><i class="fa fa-search" id="lupa"></i></a>
+            <input type="search" name="" class="search" placeholder="Search . . . . .">
+        </div>
+        <nav>
+            <a href="{% url 'home' %}"><i class="fa fa-heart"></i> home</a>  <!--(para testar, tem que por o icone no lugar)-->
+            <a href="{% url 'favoritos' %}"><i class="fa fa-heart"></i> Favoritos</a>
+            <a href="{% url 'carrinho' %}"><i class="fa fa-shopping-cart"></i> Carrinho</a>
+            <a href=""><i class="fa fa-wrench"></i> Produtor</a>
+            <a href=""><i class="fa fa-bars"></i> Menu</a>
+        </nav>
+    </div>
+</header>
+
 <body>
-  <main>
-    <h1 class="TitleG">BEM VINDO á Yggdrasil E-Commerce<br>Cadastre-se</h1>
-    <div id="corpoLogs">
+    <main>
+        <h1 class="TitleG">BEM VINDO á Yggdrasil E-Commerce<br>Cadastre-se</h1>
+        <div id="corpoLogs">
 
             <h3 class="TitleS">Insira suas Informações para cadastrar na "Yggdrasil"</h3>
             <br>
             <form action="cadastro.php" method="post">
                 <table class="cadastro">
-                  {% csrf_token %}
+                    {% csrf_token %}
                     <tr>
                         <td colspan="2" style="text-align:center;"><strong>Cadastro</strong></td>
                     </tr>
@@ -43,7 +61,8 @@
                     </tr>
                     <tr>
                         <td>Telefone:</td>
-                        <td><input id="phoneNumber" type="text" name="phoneNumber" placeholder="(99)99000-0000" maxlength="13" /></td>
+                        <td><input id="phoneNumber" type="text" name="phoneNumber" placeholder="(99)99000-0000"
+                                maxlength="13" /></td>
                     </tr>
                     <tr>
                         <td>E-Mail:</td>
@@ -55,7 +74,8 @@
                     </tr>
                     <tr>
                         <td>Confirme sua Senha:</td>
-                        <td><input id="passwordConfirm" type="password" name="confirmar_senha" placeholder="Confirmar Senha"></td>
+                        <td><input id="passwordConfirm" type="password" name="confirmar_senha"
+                                placeholder="Confirmar Senha"></td>
                     </tr>
                     <tr>
                         <td colspan="2">
@@ -64,9 +84,9 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                          <div class="link">
-                            <p class="leitura">Já tem conta?<a href="{% url 'login' %}"> Faça login</a></p>
-                          </div>
+                            <div class="link">
+                                <p class="leitura">Já tem conta?<a href="{% url 'login' %}"> Faça login</a></p>
+                            </div>
                         </td>
                     </tr>
                 </table>
@@ -75,20 +95,21 @@
                 <div class="error">{{ message }}</div>
                 {% endfor %}
                 {% endif %}
-            </form>  
+            </form>
         </div>
-    </div>
-</main>
+        </div>
+    </main>
 
-<!-- Mascaras -->
-<script>
- $('#cep').mask('00000-000');
- $('#phoneNumber').mask('(00) 00000-0000');
- $('#cpf').mask('000.000.000-00', {reverse: true});
-</script>
+    <!-- Mascaras -->
+    <script>
+        $('#cep').mask('00000-000');
+        $('#phoneNumber').mask('(00) 00000-0000');
+        $('#cpf').mask('000.000.000-00', { reverse: true });
+    </script>
 
     <footer>
         <h1>footer</h1>
     </footer>
 </body>
+
 </html>

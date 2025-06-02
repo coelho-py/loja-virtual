@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-# Tela de login
 def login_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -12,12 +11,11 @@ def login_view(request):
         user = authenticate(request, username=username, password=senha)
         if user is not None:
             login(request, user)
-            return redirect('home')  # Altere para o nome da sua página principal
+            return redirect('home')
         else:
             messages.error(request, 'Usuário ou senha inválidos.', extra_tags='login')
     return render(request, 'login/login.html')
 
-# Tela de registro
 def registro_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -44,15 +42,16 @@ def registro_view(request):
 
     return render(request, 'login/registro.html')
 
-# Logout
 def logout_view(request):
     logout(request)
     return redirect('login')
 
-@login_required(login_url='login')
 def home_view(request):
     return render(request, 'login/home.html')
 
-@login_required
 def favoritos_view(request):
     return render(request, 'login/favoritos.html', {})
+
+def carrinho_view(request):
+    return render(request, 'login/carrinho.html', {})
+
