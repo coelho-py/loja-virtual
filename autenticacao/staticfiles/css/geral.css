@@ -161,4 +161,15 @@ footer{
 
 }
 
+.Box-Info{
+    Border:2pc solid white;
+    padding: 20px;
+    gap:10px;
+}
+
+.info{
+    background-color: aquamarine;
+    border:2px solid black;
+}
+
 /*Footer End*/
