@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Virtual</title>
+</head>
+<body>
+    <header>
+        <div class="Nav-box">
+            <div class="search-box">
+                <a href=""><i class="fa fa-search" id="lupa"></i></a>
+                <input type="search" name="" class="search" placeholder="Search . . . . .">
+            </div>
+            <nav>
+                <a href="{% url 'home' %}"><i class="fa fa-heart"></i> home</a>  <!--(para testar, tem que por o icone no lugar)-->
+                <a href="{% url 'favoritos' %}"><i class="fa fa-heart"></i> Favoritos</a>
+                <a href="{% url 'carrinho' %}"><i class="fa fa-shopping-cart"></i> Carrinho</a>
+                <a href=""><i class="fa fa-wrench"></i> Produtor</a>
+                <a href=""><i class="fa fa-bars"></i> Menu</a>
+                {% if user.is_authenticated %}
+                <a><i class="fa fa-user-circle"></i> Olá, {{ user.username }}!</a>
+                <a href="{% url 'logout' %}">Sair</a>
+                {% else %}
+                <a href="{% url 'login'  %}"><i class="fa fa-user-circle"></i> Entrar ou Cadastrar</a>
+                {% endif %}
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <dic class="article">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe aspernatur commodi harum repudiandae quisquam. Dignissimos, dicta incidunt alias voluptates laborum recusandae quibusdam officiis facilis ea veritatis aliquam, placeat expedita quas.</dic>
+            <dic class="article"></dic>
+            <dic class="article">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe aspernatur commodi harum repudiandae quisquam. Dignissimos, dicta incidunt alias voluptates laborum recusandae quibusdam officiis facilis ea veritatis aliquam, placeat expedita quas.</dic>
+            <dic class="article"></dic>
+            <dic class="article">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe aspernatur commodi harum repudiandae quisquam. Dignissimos, dicta incidunt alias voluptates laborum recusandae quibusdam officiis facilis ea veritatis aliquam, placeat expedita quas.</dic>
+        </section>
+    </main>
+
+    <footer>
+        <div class="box-item">
+
+            <div class="info footer1">1</div>
+            <div class="info footer2">2</div>
+            <div class="info footer3">3</div>
+            <div class="info footer4">4</div>
+
+        </div>
+    </footer>
+    
+</body>
+</html>
