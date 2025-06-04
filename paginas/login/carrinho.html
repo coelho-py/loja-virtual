@@ -3,18 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estiloCar.css">
+    <link rel="stylesheet" href="{% static 'css/carrinho.css' %}">
+    <link rel="stylesheet" href="{% static 'css/geral.css' %}">
     <title>Carrinho</title>
     <h1>Carrinho</h1>
 </head>
 <body>
+        <header>
+        <div class="Nav-box">
+            <div class="search-box">
+                <a href=""><i class="fa fa-search" id="lupa"></i></a>
+                <input type="search" name="" class="search" placeholder="Search . . . . .">
+            </div>
+            <nav>
+                <a href="{% url 'favoritos' %}"><i class="fa fa-heart"></i> Favoritos</a>
+                <a href="{% url 'carrinho' %}"><i class="fa fa-shopping-cart"></i> Carrinho</a>
+                <a href="{% url 'produtos' %}"><i class="fa fa-wrench"></i> Produtor</a>
+                <a href=""><i class="fa fa-bars"></i> Menu</a>
+                {% if user.is_authenticated %}
+                <a><i class="fa fa-user-circle"></i> Olá, {{ user.username }}!</a>
+                <a href="{% url 'logout' %}">Sair</a>
+                {% else %}
+                <a href="{% url 'login'  %}"><i class="fa fa-user-circle"></i> Entrar ou Cadastrar</a>
+                {% endif %}
+            </nav>
+        </div>
+    </header>
     <div id="car-items">
         <p id="em-cart-mensa">seu Carrinho está vazio </p>
     </div>
      <div class="cart-total">
         Total: R$ <span id="cart-total">0.00</span>
      </div>
-     <a href="home.html">Voltar para a página do produto</a>
+     <a href="{% url 'home' %}">Voltar para a página do produto</a>
      <script>
         const cartItemsDiv = document.getElementById('cart-items');
         const cartTotalSpan = document.getElementById('cart-total');

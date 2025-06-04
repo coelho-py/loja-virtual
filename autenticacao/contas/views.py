@@ -55,3 +55,6 @@ def favoritos_view(request):
 def carrinho_view(request):
     return render(request, 'login/carrinho.html', {})
 
+def produtos_view(request):
+    return render(request, 'login/produtos.html', {})
+
