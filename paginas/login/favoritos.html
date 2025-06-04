@@ -27,9 +27,8 @@
 
             <nav>
                 <a href="{% url 'home' %}"><i class="fa fa-home"></i> home</a> <!--(para testar, tem que por o icone no lugar)-->
-                <a href="{% url 'favoritos' %}"><i class="fa fa-heart"></i> Favoritos</a>
                 <a href="{% url 'carrinho' %}"><i class="fa fa-shopping-cart"></i> Carrinho</a>
-                <a href=""><i class="fa fa-wrench"></i> Produtor</a>
+                <a href="{% url 'produtos' %}"><i class="fa fa-wrench"></i> Produtor</a>
                 <a href=""><i class="fa fa-bars"></i> Menu</a>
                 {% if user.is_authenticated %}
                 <a><i class="fa fa-user-circle"></i> Olá, {{ user.username }}!</a>
