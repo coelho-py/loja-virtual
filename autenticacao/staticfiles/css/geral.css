@@ -199,6 +199,7 @@ footer {
     flex: 1; 
     min-width: 200px; 
     padding: 1rem;
+    color: #FFFFFF;
 }
 
 .footer-section h3 {
