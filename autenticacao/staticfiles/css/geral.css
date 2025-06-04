@@ -152,6 +152,8 @@ nav a:hover::after{
 /*Fim Nav*/
 
 /*Footer Start*/
+/*
+
 footer{
     background-color:  var(--cor_header);
     text-align: center;
@@ -174,4 +176,116 @@ footer{
     border:2px solid black;
 }
 
+*/
+
+/* Define a CSS Custom Property for consistent branding */
+:root {
+    --primary-color: #2c3e50; /* A dark blue/grey for the footer background */
+    --text-color-light: #ecf0f1; /* Light text for dark backgrounds */
+    --accent-color: #3498db; /* A blue for links/highlights */
+}
+
+/* Footer Start */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    padding: 3rem 1.5rem; /* More vertical padding, some horizontal padding */
+    width: 100%;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+    justify-content: space-between; /* Distributes space between sections */
+    max-width: 1200px; /* Max width for content to prevent it from stretching too wide */
+    margin: 0 auto; /* Centers the container */
+    gap: 2rem; /* Space between flex items */
+}
+
+.footer-section {
+    flex: 1; /* Allows sections to grow and shrink */
+    min-width: 200px; /* Minimum width for each section before wrapping */
+    padding: 1rem;
+}
+
+.footer-section h3 {
+    color: var(--text-color-light);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
+    padding-bottom: 0.5rem;
+}
+
+.footer-section p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul {
+    list-style: none; /* Remove bullet points from lists */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-section ul li a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-section ul li a:hover {
+    color: var(--accent-color); /* Highlight on hover */
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem; /* Space between social icons */
+}
+
+.social-icons a img {
+    width: 28px; /* Size of social icons */
+    height: 28px;
+    border-radius: 50%; /* Make icons circular if they are square images */
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: translateY(-3px); /* Subtle lift effect on hover */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Separator for bottom section */
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        align-items: center; /* Center items when stacked */
+        text-align: center;
+    }
+
+    .footer-section {
+        width: 100%; /* Full width for sections on small screens */
+        min-width: unset; /* Remove min-width constraint */
+    }
+
+    .social-icons {
+        justify-content: center; /* Center social icons */
+    }
+}
+/* Footer End */
 /*Footer End*/
