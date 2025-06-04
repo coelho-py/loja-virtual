@@ -195,6 +195,10 @@ footer {
     gap: 2rem;
 }
 
+.branco{
+    color:#FFFFFF;
+}
+
 .footer-section {
     flex: 1; 
     min-width: 200px; 
