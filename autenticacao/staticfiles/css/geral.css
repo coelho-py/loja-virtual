@@ -177,43 +177,35 @@ footer{
 }
 
 */
-
-/* Define a CSS Custom Property for consistent branding */
-:root {
-    --primary-color: #2c3e50; /* A dark blue/grey for the footer background */
-    --text-color-light: #ecf0f1; /* Light text for dark backgrounds */
-    --accent-color: #3498db; /* A blue for links/highlights */
-}
-
 /* Footer Start */
 footer {
-    background-color: var(--primary-color);
-    color: var(--text-color-light);
-    padding: 3rem 1.5rem; /* More vertical padding, some horizontal padding */
+    background-color: #FFFFFF;
+    color:  #FFFFFF;
+    padding: 3rem 1.5rem; 
     width: 100%;
-    box-sizing: border-box; /* Include padding in the element's total width and height */
+    box-sizing: border-box; 
 }
 
 .footer-container {
     display: flex;
-    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
-    justify-content: space-between; /* Distributes space between sections */
-    max-width: 1200px; /* Max width for content to prevent it from stretching too wide */
-    margin: 0 auto; /* Centers the container */
-    gap: 2rem; /* Space between flex items */
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    max-width: 1200px;
+    margin: 0 auto; 
+    gap: 2rem;
 }
 
 .footer-section {
-    flex: 1; /* Allows sections to grow and shrink */
-    min-width: 200px; /* Minimum width for each section before wrapping */
+    flex: 1; 
+    min-width: 200px; 
     padding: 1rem;
 }
 
 .footer-section h3 {
-    color: var(--text-color-light);
+    color:  #FFFFFF;
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 0.5rem;
 }
 
@@ -224,7 +216,7 @@ footer {
 }
 
 .footer-section ul {
-    list-style: none; /* Remove bullet points from lists */
+    list-style: none; 
     padding: 0;
     margin: 0;
 }
@@ -234,58 +226,57 @@ footer {
 }
 
 .footer-section ul li a {
-    color: var(--text-color-light);
+    color:  #FFFFFF;
     text-decoration: none;
     font-size: 0.95rem;
-    transition: color 0.3s ease; /* Smooth hover effect */
+    transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-    color: var(--accent-color); /* Highlight on hover */
+    color:  #FFFFFF; 
     text-decoration: underline;
 }
 
 .social-icons {
     display: flex;
-    gap: 1rem; /* Space between social icons */
+    gap: 1rem; 
 }
 
 .social-icons a img {
-    width: 28px; /* Size of social icons */
+    width: 28px; 
     height: 28px;
-    border-radius: 50%; /* Make icons circular if they are square images */
+    border-radius: 50%;
     transition: transform 0.3s ease;
 }
 
 .social-icons a img:hover {
-    transform: translateY(-3px); /* Subtle lift effect on hover */
+    transform: translateY(-3px);
 }
 
 .footer-bottom {
     text-align: center;
     margin-top: 3rem;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Separator for bottom section */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: #FFFFFF;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .footer-container {
-        flex-direction: column; /* Stack sections vertically on smaller screens */
-        align-items: center; /* Center items when stacked */
+        flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
     .footer-section {
-        width: 100%; /* Full width for sections on small screens */
-        min-width: unset; /* Remove min-width constraint */
+        width: 100%; 
+        min-width: unset; 
     }
 
     .social-icons {
-        justify-content: center; /* Center social icons */
+        justify-content: center; 
     }
 }
-/* Footer End */
 /*Footer End*/
