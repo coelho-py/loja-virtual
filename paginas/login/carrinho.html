@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estiloCar.css">
+    <link rel="stylesheet" href="{% static 'css/estiloCar.css' %}">
     <title>Carrinho</title>
     <h1>Carrinho</h1>
 </head>
@@ -14,7 +14,7 @@
      <div class="cart-total">
         Total: R$ <span id="cart-total">0.00</span>
      </div>
-     <a href="home.html">Voltar para a página do produto</a>
+     <a href="{% url 'home' %}">Voltar para a página do produto</a>
      <script>
         const cartItemsDiv = document.getElementById('cart-items');
         const cartTotalSpan = document.getElementById('cart-total');
