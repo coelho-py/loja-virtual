@@ -155,7 +155,6 @@ nav a:hover::after{
 
 footer {
     background-color: var(--cor_header); 
-    color: #FFFFFF; 
     padding: 3rem 1.5rem;
     width: 100%;
     box-sizing: border-box;
@@ -164,10 +163,8 @@ footer {
 
 .footer-section {
     text-align: left;
+    color: #FFFFFF; 
 }
 
-.branco {
-    color: #FFFFFF;
-}
 
 /*Footer End*/
