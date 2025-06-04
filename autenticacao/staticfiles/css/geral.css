@@ -236,47 +236,4 @@ footer {
     color:  #FFFFFF; 
     text-decoration: underline;
 }
-
-.social-icons {
-    display: flex;
-    gap: 1rem; 
-}
-
-.social-icons a img {
-    width: 28px; 
-    height: 28px;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-}
-
-.social-icons a img:hover {
-    transform: translateY(-3px);
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 3rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); 
-    font-size: 0.85rem;
-    color: #FFFFFF;
-}
-
-
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-section {
-        width: 100%; 
-        min-width: unset; 
-    }
-
-    .social-icons {
-        justify-content: center; 
-    }
-}
 /*Footer End*/
