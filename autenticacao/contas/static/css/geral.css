@@ -151,42 +151,21 @@ nav a:hover::after{
 
 /*Fim Nav*/
 
+
 /*Footer Start*/
-footer{
-    background-color:  var(--cor_header);
-    text-align: center;
-    padding: 2rem;
-    width:100%;
-    display:grid;
 
-}
-
-.box-item{
-    grid: block;
+footer {
+    background-color: var(--cor_header); 
+    padding: 3rem 1.5rem;
     width: 100%;
-    height: auto;
+    box-sizing: border-box;
+    text-align: left; 
 }
 
-.info{
-    border: 2px solid #ffffff;
-    height: 50px;
-    width: 60px;
-    padding: 1rem;
-    background-color: aqua;
+.footer-section {
+    text-align: left;
+    color: #FFFFFF; 
 }
 
-.footer1{
-    grid-area: Um;
-}
-.footer2{
-    grid-area: Dois;
-}
-.footer3{
-    grid-area: Tres;
-}
-.footer4{
-    grid-area: Quatro;
-}
+
 /*Footer End*/
-
-/*  */
