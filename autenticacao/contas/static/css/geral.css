@@ -165,6 +165,7 @@ footer {
 .footer-section {
     text-align: left;
     color: #FFFFFF; 
+    gap:10px;
 }
 
 
