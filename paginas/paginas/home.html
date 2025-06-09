@@ -1,0 +1,159 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/geral.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/logs.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
+    <title>Loja Virtual</title>
+</head>
+
+<body>
+    <header>
+        <div class="Nav-box">
+            <div class="search-box">
+                <a href=""><i class="fa fa-search" id="lupa"></i></a>
+                <input type="search" name="" class="search" placeholder="Search . . . . .">
+            </div>
+            <nav>
+                <a href="{% url 'favoritos' %}"><i class="fa fa-heart"></i> Favoritos</a>
+                <a href="{% url 'carrinho' %}"><i class="fa fa-shopping-cart"></i> Carrinho</a>
+                <a href=""><i class="fa fa-bars"></i> Menu</a>
+                {% if user.is_superuser %}
+                <a href=""><i class="fa fa-wrench"></i> Produtor</a>
+                <a href="{% url 'admi' %}"><i class="fa fa-wrench"></i> Area do admin</a>
+                {% endif %}
+                {% if user.is_authenticated %}  
+                <a href="{% url 'settings' %}"><i class="fa fa-user-circle"></i style="color:#FFFFF"> Olá, {{ user.username }}!</a>
+                <a href="{% url 'logout' %}">Sair</a>
+                {% else %}
+                <a href="{% url 'login'  %}"><i class="fa fa-user-circle"></i> Entrar ou Cadastrar</a>
+                {% endif %}
+            </nav>
+        </div>
+    </header>
+
+    <div class="Slider-box">
+        <div class="slider">
+            <img src="{% static 'img/images.png ' %}" alt="">
+            <img src="{% static 'img/images.png ' %}" alt="">
+            <img src="{% static 'img/images.png ' %}" alt="">
+        </div>
+    </div>
+
+    <main>
+
+        <section class="produtos-destaque">
+            <h2>Produtos em Destaque</h2>
+            <div class="grid-produtos">
+                <div class="produto">
+                    <img src="{% static 'img/images.png ' %}" alt="Produto 1">
+                    <h3>Produto 1</h3>
+                    <p>Cintaralho Tamanho: HERIQUE</p>
+                    <div class="preco">R$ 00,00</div>
+                    <button>Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="{% static 'img/images.png ' %}" alt="Produto 2">
+                    <h3>Produto 2</h3>
+                    <p>Descrição do produto 2.</p>
+                    <div class="preco">R$ 00,00</div>
+                    <button>Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="{% static 'img/images.png ' %}" alt="Produto 3">
+                    <h3>Produto 3</h3>
+                    <p>Descrição do produto 3.</p>
+                    <div class="preco">R$ 000,00</div>
+                    <button>Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="{% static 'img/images.png ' %}" alt="Produto 4">
+                    <h3>Produto 4</h3>
+                    <p>Descrição do produto 4.</p>
+                    <div class="preco">R$ 0.000,00</div>
+                    <button>Comprar</button>
+                </div>
+            </div>
+        </section>
+
+        <!--Products Category-->
+        <section class="categorias">
+            <div class="topo-categorias">
+                <h2>Categorias</h2>
+                <a href="#">Mostrar todas as categorias</a>
+            </div>
+
+            <div class="grid-categorias">
+                <div class="categoria-item">
+                    <img src="{% static 'img/images.png ' %}" alt="Exemplo">
+                    <span>INSIRA O PRODUTO</span>
+                </div>
+                <div class="categoria-item">
+                    <img src="{% static 'img/images.png ' %}" alt="Exemplo">
+                    <span>INSIRA O PRODUTO</span>
+                </div>
+                <div class="categoria-item">
+                    <img src="{% static 'img/images.png ' %}" alt="Exemplo">
+                    <span>INSIRA O PRODUTO</span>
+                </div>
+                <div class="categoria-item">
+                    <img src="{% static 'img/images.png ' %}" alt="Exemplo">
+                    <span>INSIRA O PRODUTO</span>
+                </div>
+                <div class="categoria-item">
+                    <img src="{% static 'img/images.png ' %}" alt="Exemplo">
+                    <span>INSIRA O PRODUTO</span>
+                </div>
+                <div class="categoria-item">
+                    <img src="{% static 'img/images.png ' %}" alt="Exemplo">
+                    <span>INSIRA O PRODUTO</span>
+                </div>
+                <div class="categoria-item">
+                    <img src="{% static 'img/images.png ' %}" alt="Exemplo">
+                    <span>INSIRA O PRODUTO</span>
+                </div>
+                <div class="categoria-item">
+                    <img src="{% static 'img/images.png ' %}" alt="Exemplo">
+                    <span>INSIRA O PRODUTO</span>
+                </div>
+                <div class="categoria-item">
+                    <img src="{% static 'img/images.png ' %}" alt="Exemplo">
+                    <span>INSIRA O PRODUTO</span>
+                </div>
+                <div class="categoria-item">
+                    <img src="{% static 'img/images.png ' %}" alt="Exemplo">
+                    <span>INSIRA O PRODUTO</span>
+                </div>
+                <div class="categoria-item">
+                    <img src="{% static 'img/images.png ' %}" alt="Exemplo">
+                    <span>INSIRA O PRODUTO</span>
+                </div>
+                <div class="categoria-item">
+                    <img src="{% static 'img/images.png ' %}" alt="Exemplo">
+                    <span>INSIRA O PRODUTO</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        
+        <div class="footer-section">
+            <h3 >Company Name</h3>
+            <p >123 Main Street</p>
+            <p >City, State ZIP</p>
+            <p >Country</p>
+            <p >Email: info@example.com</p>
+            <p >Phone: +1 (123) 456-7890</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

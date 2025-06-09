@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Redefinir Senha</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
+</head>
+
+<body>
+    <main>
+        <h1>Redefinir Senha</h1>
+
+        <p>Digite seu e-mail para receber instruções de redefinição de senha.</p>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Enviar e-mail de redefinição</button>
+        </form>
+
+        <div class="link">
+            <p class="leitura">Lembrou da senha? <a href="{% url 'login' %}">Entrar</a></p>
+        </div>
+
+        {% if messages %}
+            {% for message in messages %}
+                <div class="info">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    </main>
+</body>
+
+</html>

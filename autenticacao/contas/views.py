@@ -48,14 +48,20 @@ def logout_view(request):
     return redirect('login')
 
 def home_view(request):
-    return render(request, 'login/home.html')
+    return render(request, 'paginas/home.html')
 
 def favoritos_view(request):
-    return render(request, 'login/favoritos.html', {})
+    return render(request, 'paginas/favoritos.html', {})
 
 def carrinho_view(request):
-    return render(request, 'login/carrinho.html', {})
+    return render(request, 'paginas/carrinho.html', {})
 
 def produtos_view(request):
-    return render(request, 'login/produtos.html', {})
+    return render(request, 'paginas/produtos.html', {})
+
+def settings_view(request):
+    return render(request, 'login/settings.html', {})
+
+def admi_view(request):
+    return render(request, 'login/admi.html', {})
 

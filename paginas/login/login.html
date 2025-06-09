@@ -71,6 +71,11 @@
             {% if messages %}
             {% for message in messages %}
             <div class="error">{{ message }}</div>
+            {% if 'login' in message.tags %}
+            <div style="margin-top: 10px;">
+                <a href="{% url 'password_reset' %}" class="reset-button">Esqueceu sua senha? Redefinir</a>
+            </div>
+            {% endif %}
             {% endfor %}
             {% endif %}
         </div>
