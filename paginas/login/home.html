@@ -24,9 +24,11 @@
                 <a href="{% url 'favoritos' %}"><i class="fa fa-heart"></i> Favoritos</a>
                 <a href="{% url 'carrinho' %}"><i class="fa fa-shopping-cart"></i> Carrinho</a>
                 <a href=""><i class="fa fa-bars"></i> Menu</a>
-                {% if user.is_authenticated %}  
+                {% if user.is_superuser %}
                 <a href=""><i class="fa fa-wrench"></i> Produtor</a>
-        <a id="Usu-logado"><i class="fa fa-user-circle"></i> Olá, {{ user.username }}!</a>
+                {% endif %}
+                {% if user.is_authenticated %}
+                <a><i class="fa fa-user-circle"></i style="color:#FFFFF"> Olá, {{ user.username }}!</a>
                 <a href="{% url 'logout' %}">Sair</a>
                 {% else %}
                 <a href="{% url 'login'  %}"><i class="fa fa-user-circle"></i> Entrar ou Cadastrar</a>
@@ -140,14 +142,14 @@
     </main>
 
     <footer>
-        
+
         <div class="footer-section">
-            <h3 >Company Name</h3>
-            <p >123 Main Street</p>
-            <p >City, State ZIP</p>
-            <p >Country</p>
-            <p >Email: info@example.com</p>
-            <p >Phone: +1 (123) 456-7890</p>
+            <h3>Company Name</h3>
+            <p>123 Main Street</p>
+            <p>City, State ZIP</p>
+            <p>Country</p>
+            <p>Email: info@example.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
         </div>
     </footer>
 

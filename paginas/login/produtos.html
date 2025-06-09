@@ -1,14 +1,18 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'css/favoritos.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/geral.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/logs.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/produtos.css' %}"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Loja Virtual</title> </head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/produtos.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Loja Virtual</title>
+</head>
+
 <body>
     <header>
         <div class="Nav-box">
@@ -17,12 +21,14 @@
                 <input type="search" name="" class="search" placeholder="Search . . . . .">
             </div>
             <nav>
-                <a href="{% url 'home' %}"><i class="fa fa-home"></i> home</a> <!--(para testar, tem que por o icone no lugar)-->
                 <a href="{% url 'favoritos' %}"><i class="fa fa-heart"></i> Favoritos</a>
                 <a href="{% url 'carrinho' %}"><i class="fa fa-shopping-cart"></i> Carrinho</a>
                 <a href=""><i class="fa fa-bars"></i> Menu</a>
+                {% if user.is_superuser %}
+                <a href=""><i class="fa fa-wrench"></i> Produtor</a>
+                {% endif %}
                 {% if user.is_authenticated %}
-                <a><i class="fa fa-user-circle"></i> Olá, {{ user.username }}!</a>
+                <a><i class="fa fa-user-circle"></i style="color:#FFFFF"> Olá, {{ user.username }}!</a>
                 <a href="{% url 'logout' %}">Sair</a>
                 {% else %}
                 <a href="{% url 'login'  %}"><i class="fa fa-user-circle"></i> Entrar ou Cadastrar</a>
@@ -69,7 +75,8 @@
                     <div class="product-info">
                         <h3 class="product-title">Smartphone X</h3>
                         <p class="product-price">R$ 1.299,99</p>
-                        <button class="add-to-cart-btn" data-id="1" data-name="Smartphone X" data-price="1299.99">Adicionar ao Carrinho</button>
+                        <button class="add-to-cart-btn" data-id="1" data-name="Smartphone X"
+                            data-price="1299.99">Adicionar ao Carrinho</button>
                     </div>
                 </div>
 
@@ -78,7 +85,8 @@
                     <div class="product-info">
                         <h3 class="product-title">Fone de Ouvido Bluetooth</h3>
                         <p class="product-price">R$ 199,90</p>
-                        <button class="add-to-cart-btn" data-id="2" data-name="Fone de Ouvido Bluetooth" data-price="199.90">Adicionar ao Carrinho</button>
+                        <button class="add-to-cart-btn" data-id="2" data-name="Fone de Ouvido Bluetooth"
+                            data-price="199.90">Adicionar ao Carrinho</button>
                     </div>
                 </div>
 
@@ -87,11 +95,12 @@
                     <div class="product-info">
                         <h3 class="product-title">Smartwatch Modelo Y</h3>
                         <p class="product-price">R$ 450,00</p>
-                        <button class="add-to-cart-btn" data-id="3" data-name="Smartwatch Modelo Y" data-price="450.00">Adicionar ao Carrinho</button>
+                        <button class="add-to-cart-btn" data-id="3" data-name="Smartwatch Modelo Y"
+                            data-price="450.00">Adicionar ao Carrinho</button>
                     </div>
                 </div>
 
-                </div>
+            </div>
             <div class="pagination">
                 <button class="page-btn" disabled>Anterior</button>
                 <button class="page-btn active">1</button>
@@ -103,16 +112,19 @@
     </main>
 
     <footer>
-        
+
         <div class="footer-section">
-            <h3 >Company Name</h3>
-            <p >123 Main Street</p>
-            <p >City, State ZIP</p>
-            <p >Country</p>
-            <p >Email: info@example.com</p>
-            <p >Phone: +1 (123) 456-7890</p>
+            <h3>Company Name</h3>
+            <p>123 Main Street</p>
+            <p>City, State ZIP</p>
+            <p>Country</p>
+            <p>Email: info@example.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
         </div>
     </footer>
 
-    <script src="{% static 'js/carrinho.js' %}"></script> <script src="{% static 'js/produtos.js' %}"></script> </body>
+    <script src="{% static 'js/carrinho.js' %}"></script>
+    <script src="{% static 'js/produtos.js' %}"></script>
+</body>
+
 </html>
