@@ -20,9 +20,9 @@
 
 @keyframes slide {
     0% { transform: translateX(0); }
-    33.33% { transform: translateX(-35%); } /* Move para a segunda imagem */
-    66.66% { transform: translateX(-65%); } /* Move para a terceira imagem */
-    100% { transform: translateX(0); } /* Volta para a primeira imagem */
+    33.33% { transform: translateX(-35%); } 
+    66.66% { transform: translateX(-65%); } 
+    100% { transform: translateX(0); } 
   }
 /*Slider End*/
 
@@ -31,6 +31,11 @@ main {
     padding: 3rem 1rem;
     min-height: 100vh;
 }
+
+#Usu-logado{
+    color: #FFFFFF;
+}
+
 /* Main End */
 
 /* DIV Product Categoria Begin*/
