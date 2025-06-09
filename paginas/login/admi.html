@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/geral.css' %}">
+
+    <title>Loja Virtual</title>
+</head>
+<body>
+    <header>
+        <div class="Nav-box">
+            <div class="search-box">
+                <a href=""><i class="fa fa-search" id="lupa"></i></a>
+                <input type="search" name="" class="search" placeholder="Search . . . . .">
+            </div>
+            <nav>
+                <a href="{% url 'favoritos' %}"><i class="fa fa-heart"></i> Favoritos</a>
+                <a href="{% url 'carrinho' %}"><i class="fa fa-shopping-cart"></i> Carrinho</a>
+                <a href=""><i class="fa fa-bars"></i> Menu</a>
+                {% if user.is_authenticated %}  
+                <a href=""><i class="fa fa-wrench"></i> Produtor</a>
+        <a id="Usu-logado"><i class="fa fa-user-circle"></i> Olá, {{ user.username }}!</a>
+                <a href="{% url 'logout' %}">Sair</a>
+                {% else %}
+                <a href="{% url 'login'  %}"><i class="fa fa-user-circle"></i> Entrar ou Cadastrar</a>
+                {% endif %}
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        main
+    </main>
+
+    <footer>
+        <div class="footer-section">
+            <h3 >Company Name</h3>
+            <p >123 Main Street</p>
+            <p >City, State ZIP</p>
+            <p >Country</p>
+            <p >Email: info@example.com</p>
+            <p >Phone: +1 (123) 456-7890</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
