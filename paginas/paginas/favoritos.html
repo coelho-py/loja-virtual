@@ -23,7 +23,6 @@
             <nav>
                 <a href="{% url 'home' %}"><i class="fa fa-home"></i> home</a>
                 <a href="{% url 'carrinho' %}"><i class="fa fa-shopping-cart"></i> Carrinho</a>
-                <a href=""><i class="fa fa-bars"></i> Menu</a>
                 {% if user.is_superuser %}
                 <a href=""><i class="fa fa-wrench"></i> Produtor</a>
                 <a href="{% url 'admi' %}"><i class="fa fa-wrench"></i> Area do admin</a>

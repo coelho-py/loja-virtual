@@ -1,3 +1,13 @@
+:root{
+    --cor_fundo: #f0f0d8;
+    --cor_header: #604848;
+
+}
+
+body{
+    background-color: var(--cor_fundo)
+}
+
 /*Slider Start*/
 .Slider-box{
     width:100%;
