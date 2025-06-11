@@ -22,6 +22,7 @@
                 <input type="search" name="" class="search" placeholder="Search . . . . .">
             </div>
             <nav>
+                <a href="{% url 'home' %}"><i class="fa fa-home"></i> home</a>
                 <a href="{% url 'favoritos' %}"><i class="fa fa-heart"></i> Favoritos</a>
                 <a href="{% url 'carrinho' %}"><i class="fa fa-shopping-cart"></i> Carrinho</a>
                 <a href=""><i class="fa fa-bars"></i> Menu</a>
@@ -33,7 +34,7 @@
                 <a href="{% url 'settings' %}"><i class="fa fa-user-circle"></i style="color:#FFFFF"> Olá, {{ user.username }}!</a>
                 <a href="{% url 'logout' %}">Sair</a>
                 {% else %}
-                <a href="{% url 'login'  %}"><i class="fa fa-user-circle"></i> Entrar ou Cadastrar</a>
+                <a href="{% url 'login'  %}"><i class="fa fa-user-circle"></i>Entrar<a>ou</a><a href="{% url 'registro' %}">Cadastrar</a></a>
                 {% endif %}
             </nav>
         </div>
