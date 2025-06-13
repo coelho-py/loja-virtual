@@ -170,3 +170,9 @@ footer {
 
 
 /*Footer End*/
+
+/* Link */
+a {
+    text-decoration: none;
+    color: blue;
+}
