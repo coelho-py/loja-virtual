@@ -50,7 +50,7 @@ def logout_view(request):
 def home_view(request):
     return render(request, 'paginas/home.html')
 
-def favoritos_view(request):
+def pesquisa_view(request):
     return render(request, 'paginas/favoritos.html', {})
 
 def carrinho_view(request):
