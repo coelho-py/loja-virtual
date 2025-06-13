@@ -51,7 +51,7 @@ def home_view(request):
     return render(request, 'paginas/home.html')
 
 def pesquisa_view(request):
-    return render(request, 'paginas/favoritos.html', {})
+    return render(request, 'paginas/pesquisa.html', {})
 
 def carrinho_view(request):
     return render(request, 'paginas/carrinho.html', {})
