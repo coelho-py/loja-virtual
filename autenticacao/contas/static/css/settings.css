@@ -2,15 +2,31 @@
   box-sizing: border-box;
 }
 
+.settingsLinha {margin: 0 75px;}
+
+.settingsLinha:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.settingsLinhaSair {margin: 0 75px;}
+
+.settingsLinhaSair:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /* Coloca 4 colunas lado a lado(mas quero so 3 por linha) */
-.coluna {
+.settingsColuna {
   float: left;
   margin-left: 6%;
   width: 25%;
   padding: 8px 8px;
   padding-top: 50px;
 }
-.colunaSair {
+.settingsColunaSair {
   float: left;
   margin-left: 37%;
   width: 25%;
@@ -18,20 +34,9 @@
   padding-bottom: 50px;
 }
 
-
-/* Remove o lado esquerdo e direito extra */
-.linha {margin: 0 75px;}
-
-/* Some com os espaçamentos depois dos cards */
-.linha:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /* Colunas Responsivas */
 @media screen and (max-width: 600px) {
-  .coluna {
+  .settingsColuna {
     width: 100%;
     display: block;
     margin-bottom: 20px;
