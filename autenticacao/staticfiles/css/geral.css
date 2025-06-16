@@ -46,6 +46,10 @@ main {
     color:#FFF;
 }
 
+#btn-search-home{
+    opacity: 50%;
+}
+
 .Nav-box{
     display: flex;
 }
