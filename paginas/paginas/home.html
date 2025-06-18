@@ -18,7 +18,10 @@
         <div class="Nav-box">
             <form class="search-box" method=POST action="{% url 'pesquisa' %}">
                 {% csrf_token %}
-                <i class="fa fa-search" id="lupa"></i></a>
+                <button type="submit" style="background:none; border:none; cursor:pointer; padding: 0; background-color: transparent; outline: none;">
+                    <a href=""><i class="fa fa-search" id="lupa"></i></a>
+                </button>
+                <input type="search" name="" class="search" placeholder="Search . . . . .">
                 <input type="search" name="Searched" class="search" placeholder="Search . . . . .">
             </form>
 
