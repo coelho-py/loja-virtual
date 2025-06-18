@@ -16,10 +16,15 @@
 
 <header>
     <div class="Nav-box">
-        <div class="search-box">
-            <a href=""><i class="fa fa-search" id="lupa"></i></a>
-            <input type="search" name="" class="search" placeholder="Search . . . . .">
-        </div>
+        
+        <form class="search-box" method=POST action="{% url 'pesquisa' %}">
+            {% csrf_token %}
+            <button type="submit" style="background:none; border:none; cursor:pointer; padding: 0; background-color: transparent; outline: none;">
+                <a href=""><i class="fa fa-search" id="lupa"></i></a>
+            </button>
+            <input type="search" name="Searched" class="search" placeholder="Search . . . . .">
+        </form>
+
         <nav>
                 <a href="{% url 'home' %}"><i class="fa fa-home"></i> home</a>
                 <a href="{% url 'pesquisa' %}"><i class="fa fa-heart"></i> Favoritos</a>
