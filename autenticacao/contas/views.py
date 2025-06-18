@@ -66,6 +66,6 @@ def admi_view(request):
 def pesquisa_view(request):
     if request.method == "POST":
         searched = request.POST['Searched']
-        return render(request, 'paginas/pesquisa.html', {})
+        return render(request, 'paginas/pesquisa.html', {'Searched' : searched})
     else:
          return render(request, 'paginas/pesquisa.html', {})
