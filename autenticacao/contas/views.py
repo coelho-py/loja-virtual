@@ -50,8 +50,6 @@ def logout_view(request):
 def home_view(request):
     return render(request, 'paginas/home.html')
 
-def pesquisa_view(request):
-    return render(request, 'paginas/pesquisa.html', {})
 
 def carrinho_view(request):
     return render(request, 'paginas/carrinho.html', {})
@@ -65,3 +63,9 @@ def settings_view(request):
 def admi_view(request):
     return render(request, 'login/admi.html', {})
 
+def pesquisa_view(request):
+    if request.method == "POST":
+        searched = request.POST['Searched']
+        return render(request, 'paginas/pesquisa.html', {})
+    else:
+         return render(request, 'paginas/pesquisa.html', {})
