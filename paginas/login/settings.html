@@ -19,7 +19,6 @@
             </div>
             <nav>
                 <a href="{% url 'home' %}"><i class="fa fa-home"></i> home</a>
-                <a href="{% url 'pesquisa' %}"><i class="fa fa-heart"></i> Favoritos</a>
                 <a href="{% url 'carrinho' %}"><i class="fa fa-shopping-cart"></i> Carrinho</a>
                 {% if user.is_superuser %}
                 <a href=""><i class="fa fa-wrench"></i> Produtor</a>
@@ -35,7 +34,7 @@
         </div>
     </header>
 
-        <div class="linha">
+        <div class="settingsLinha">
             <a id="link" href="">
             <div class="coluna">
                 <div class="settingsCard">
@@ -47,7 +46,7 @@
             </div>
             </a>
             <a id="link" href="">
-            <div class="coluna">
+            <div class="settingsColuna">
                 <div class="settingsCard">
                     <img src="{% static 'img/images.png ' %}" alt="Meus Pedidos">
                     <div class="settingsContainer">
@@ -57,7 +56,7 @@
             </div>
             </a>
             <a id="link" href="">
-            <div class="coluna">
+            <div class="settingsColuna">
                 <div class="settingsCard">
                     <img src="{% static 'img/images.png ' %}" alt="Meus Favoritos">
                     <div class="settingsContainer">
@@ -68,9 +67,9 @@
             </a>
         </div>
 
-        <div class="linha">
+        <div class="settingsLinha">
             <a id="link" href="">
-            <div class="coluna">
+            <div class="settingsColuna">
                 <div class="settingsCard">
                     <img src="{% static 'img/images.png ' %}" alt="Meus Tickets">
                     <div class="settingsContainer">
@@ -80,7 +79,7 @@
             </div>
             </a>
             <a id="link" href="">
-            <div class="coluna">
+            <div class="settingsColuna">
                 <div class="settingsCard">
                     <img src="{% static 'img/images.png ' %}" alt="Meus Endereços">
                     <div class="settingsContainer">
@@ -90,9 +89,9 @@
             </div>
             </a>
             <a id="link" href="{% url 'mudarsenha' %}">
-            <div class="coluna">
+            <div class="settingsColuna">
                 <div class="settingsCard">
-                    <img src="{% static 'img/images.png ' %}" alt="Sair">
+                    <img src="{% static 'img/images.png ' %}" alt="Alterar Senha">
                     <div class="settingsContainer">
                         <h4 class="cardTXT"><b>Alterar Senha</b></h4>
                     </div>
@@ -101,9 +100,9 @@
             </a>
         </div>
         
-        <div class="linha">
+        <div class="settingsLinhaSair">
             <a id="link" href="{% url 'logout' %}">
-            <div class="colunaSair">
+            <div class="settingsColunaSair">
                 <div class="settingsCard">
                     <img src="{% static 'img/images.png ' %}" alt="Sair">
                     <div class="settingsContainer">
