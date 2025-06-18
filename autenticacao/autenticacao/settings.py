@@ -78,14 +78,14 @@ WSGI_APPLICATION = 'autenticacao.wsgi.application'
 
 DATABASES = {
     'default': {
-        #'ENGINE': 'django.db.backends.sqlite3',
-        #'NAME':BASE_DIR / 'dbLoja.sqlite3',
-         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-         'NAME': 'postgres',
-         'USER': 'postgres',
-         'PASSWORD': 'janjan69',
-         'HOST': 'localhost',
-        'PORT': '5432'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME':BASE_DIR / 'dbLoja.sqlite3',
+        #'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        #'NAME': 'postgres',
+        #'USER': 'postgres',
+        #'PASSWORD': 'janjan69',
+        #'HOST': 'localhost',
+        #'PORT': '5432'
     }
 }
 
