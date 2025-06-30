@@ -52,3 +52,64 @@ CREATE TABLE pedido (
     FOREIGN KEY (idProduto) REFERENCES produtos(idProduto),
     FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario)
 );
+
+
+codigo em postgreSQL
+
+CREATE TABLE categoria ( 
+    idCategoria BIGSERIAL PRIMARY KEY,  
+    nomeCategoria VARCHAR(100) NOT NULL  
+); 
+
+CREATE TABLE produtos ( 
+    idProduto BIGSERIAL PRIMARY KEY,  
+    nome VARCHAR(100) NOT NULL,  
+    descricao TEXT NOT NULL,  
+    urlImagem VARCHAR(255) NOT NULL,  
+    valor NUMERIC(10,2) NOT NULL,  
+    idCategoria BIGINT,
+    FOREIGN KEY (idCategoria) REFERENCES categoria(idCategoria) ON DELETE SET NULL
+); 
+
+CREATE TABLE endereco ( 
+    idEndereco BIGSERIAL PRIMARY KEY,  
+    rua VARCHAR(100) NOT NULL,  
+    numero INT NOT NULL,  
+    cidade VARCHAR(100) NOT NULL,  
+    estado VARCHAR(50) NOT NULL,  
+    complemento VARCHAR(100),  
+    cep VARCHAR(10) NOT NULL  
+); 
+
+CREATE TABLE usuario ( 
+    idUsuario BIGSERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,  
+    telefone VARCHAR(15) NOT NULL,  
+    email VARCHAR(100) NOT NULL UNIQUE,  
+    sexo CHAR(1) NOT NULL CHECK (sexo IN ('M', 'F', 'O')), -- M = Masculino, F = Feminino, O = Outro
+    cpf VARCHAR(14) NOT NULL UNIQUE,  
+    senha VARCHAR(100) NOT NULL,  
+    idEndereco BIGINT,
+    FOREIGN KEY (idEndereco) REFERENCES endereco(idEndereco) ON DELETE SET NULL
+); 
+
+-- Melhor modelagem: um pedido pode ter vários itens
+CREATE TABLE pedido ( 
+    idPedido BIGSERIAL PRIMARY KEY,
+    idUsuario BIGINT NOT NULL,
+    cliente VARCHAR(100) NOT NULL,
+    dataPedido DATE NOT NULL DEFAULT CURRENT_DATE,
+    fechado CHAR(1) NOT NULL CHECK (fechado IN ('S', 'N')),
+    cartao VARCHAR(20) NOT NULL,
+    FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario) ON DELETE CASCADE
+);
+
+CREATE TABLE pedido_item (
+    idPedidoItem BIGSERIAL PRIMARY KEY,
+    idPedido BIGINT NOT NULL,
+    idProduto BIGINT NOT NULL,
+    valorProduto NUMERIC(10,2) NOT NULL,
+    quantidade INT NOT NULL CHECK (quantidade > 0),
+    FOREIGN KEY (idPedido) REFERENCES pedido(idPedido) ON DELETE CASCADE,
+    FOREIGN KEY (idProduto) REFERENCES produtos(idProduto) ON DELETE RESTRICT
+);
